@@ -32,7 +32,7 @@ requests==2.34.2
 python-dotenv==1.2.4
 
 # Local web app (loopback only; served from static files, no build step)
-fastapi==0.163.1
+fastapi==0.165.0
 uvicorn==0.54.0
 
 # Test and lint tooling
