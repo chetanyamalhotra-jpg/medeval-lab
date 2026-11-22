@@ -1,0 +1,79 @@
+# PIPELINE TEST / TEMPLATE DATA.
+# Synthetic abstract-style inputs for JSON extraction.
+schema_version: 1
+id: template-structured-extraction
+version: 0.1.0
+title: "Structured extraction from biomedical abstract-style text (synthetic template)"
+authors: ["medeval-lab contributors"]
+year: 2026
+venue: "Synthetic pipeline template (not a published study)"
+doi_or_url: "https://github.com/medeval-lab/medeval-lab/tree/main/papers/template-structured-extraction"
+license: "CC0-1.0"
+methodology_notes:
+  kind: synthetic_pipeline_template
+  summary: >-
+    A synthetic extraction template that checks JSON-schema validity, field-level
+    F1 and exact match on abstract-style inputs. It does not use copyrighted
+    abstracts or reproduce a published extraction benchmark.
+  limitations: >-
+    The inputs are invented and short; field-level F1 on eight items is a wiring
+    check, not evidence about any extraction model.
+task_type: structured_extraction
+dataset:
+  path: data/dataset.jsonl
+  format: jsonl
+  seed: 20260101
+  limit: 8
+  screening_size: 0
+  fields:
+    input: abstract
+prompt_template:
+  system: |
+    You extract structured research fields from synthetic text. Return JSON only.
+  user: |
+    Text:
+    $input
+
+    Extract exactly these fields: diagnosis, intervention, population.
+    Return one JSON object shaped as {"fields": {"diagnosis": "...", "intervention": "...", "population": "..."}}.
+    Use an empty string for a field the text does not state.
+graders:
+  - id: schema
+    type: deterministic
+    metric: json_schema
+    options:
+      schema:
+        type: object
+        required: [fields]
+        properties:
+          fields:
+            type: object
+            required: [diagnosis, intervention, population]
+            properties:
+              diagnosis: {type: string}
+              intervention: {type: string}
+              population: {type: string}
+  - id: fields
+    type: deterministic
+    metric: field_f1
+    options:
+      fields: [diagnosis, intervention, population]
+  - id: format
+    type: deterministic
+    metric: format_compliance
+metrics:
+  primary: field_f1
+  secondary: [json_schema, format_compliance]
+  comparison:
+    method: paired_bootstrap
+    alpha: 0.05
+    bootstrap_resamples: 2000
+    bootstrap_seed: 20260101
+citation:
+  bibtex: |
+    @misc{template_structured_extraction,
+      title = {Structured extraction from biomedical abstract-style text: a synthetic Paper Pack template},
+      author = {medeval-lab contributors},
+      year = {2026},
+      note = {Synthetic pipeline template; not a published study and not clinically validated}
+    }

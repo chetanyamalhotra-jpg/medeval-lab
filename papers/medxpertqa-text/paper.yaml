@@ -1,0 +1,94 @@
+# Built-in preset. Synthetic smoke rows only; no MedXpertQA rows are bundled.
+schema_version: 1
+id: medxpertqa-text
+version: 0.1.0
+preset: true
+title: "MedXpertQA-inspired hard clinical reasoning MCQ"
+authors:
+  - "Yuxin Zuo"
+  - "Shang Qu"
+  - "Yifei Li"
+  - "Zhangren Chen"
+  - "Xuekai Zhu"
+  - "Ermo Hua"
+  - "Kaiyan Zhang"
+  - "Ning Ding"
+  - "Bowen Zhou"
+year: 2025
+venue: "ICML 2025"
+doi_or_url: "https://arxiv.org/abs/2501.18362"
+license: "CC0-1.0 for the synthetic smoke rows; upstream MedXpertQA terms apply to the source data"
+methodology_notes:
+  kind: inspired_adaptation
+  summary: >-
+    A hard clinical-reasoning multiple-choice evaluation inspired by the text
+    subset of MedXpertQA: one best option from a longer option set, deterministic
+    grading, abstention/format reporting and a paired McNemar comparison between
+    target models. Smoke items are synthetic reasoning vignettes.
+  limitations: >-
+    No MedXpertQA rows are bundled. The four smoke items are invented, the option
+    set is smaller than the benchmark's, and the sample cannot support a claim
+    about expert-level reasoning. Not clinically validated.
+task_type: mcq
+source_dataset:
+  name: "MedXpertQA (Tsinghua C3I / Shanghai AI Lab, ICML 2025)"
+  url: "https://github.com/TsinghuaC3I/MedXpertQA"
+  huggingface: "TsinghuaC3I/MedXpertQA"
+  license: "See the upstream dataset card for the exact licence and terms."
+  notes: >-
+    Reference only. The loader downloads only on explicit request and writes into
+    git-ignored .medeval_data/. The image subset is out of scope for this text pack.
+adaptation_status: "synthetic_smoke_only; protocol-inspired, not a faithful reproduction; no upstream rows bundled"
+loader: loader.py
+dataset:
+  path: smoke.jsonl
+  format: jsonl
+  seed: 20260101
+  limit: 4
+  screening_size: 0
+  fields: {}
+prompt_template:
+  system: |
+    You are answering a hard clinical-reasoning multiple-choice item inside a
+    research benchmark. This is not patient care. Select the single best option,
+    or write ABSTAIN if the item is insufficient. Do not give patient-specific
+    advice.
+  user: |
+    Vignette and question:
+    $question
+
+    Options:
+    $options_block
+
+    Reply exactly as:
+    ANSWER: <letter or ABSTAIN>
+    REASON: <one or two sentences>
+graders:
+  - id: accuracy
+    type: deterministic
+    metric: mcq_accuracy
+  - id: abstention
+    type: deterministic
+    metric: abstention
+  - id: format
+    type: deterministic
+    metric: format_compliance
+metrics:
+  primary: accuracy
+  secondary: [abstention, format_compliance]
+  comparison:
+    method: mcnemar
+    alpha: 0.05
+    bootstrap_resamples: 2000
+    bootstrap_seed: 20260101
+citation:
+  bibtex: |
+    @inproceedings{zuo2025medxpertqa,
+      title = {MedXpertQA: Benchmarking Expert-Level Medical Reasoning and Understanding},
+      author = {Zuo, Yuxin and Qu, Shang and Li, Yifei and Chen, Zhangren and Zhu, Xuekai and Hua, Ermo and Zhang, Kaiyan and Ding, Ning and Zhou, Bowen},
+      booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
+      year = {2025},
+      eprint = {2501.18362},
+      archivePrefix = {arXiv},
+      url = {https://arxiv.org/abs/2501.18362}
+    }

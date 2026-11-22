@@ -1,0 +1,11 @@
+# Email addresses that may appear in this repository.
+#
+# The release audit (scripts/oss_audit.py) fails on any email address whose
+# domain is not listed here and is not an obviously non-routable example domain
+# (example.com, example.org, example.net, example.invalid).
+#
+# One address per line; "#" starts a comment. If you choose to publish a contact
+# address (for example a GitHub noreply address), add it here so the audit knows
+# it is intentional. Otherwise leave this file as it is.
+#
+301152462+chetanyamalhotra-jpg@users.noreply.github.com

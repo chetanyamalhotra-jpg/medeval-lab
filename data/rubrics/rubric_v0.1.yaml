@@ -1,0 +1,29 @@
+# Rubric v0.1 -- weights and judge instructions for the medeval-lab criteria.
+#
+# The weights below are the authors' judgement of importance for a general
+# medical-reasoning evaluation. They are NOT empirically validated: no study
+# shows that these weights reproduce clinician rankings. The weighted total is
+# therefore reported as exploratory only; the per-criterion scores are the
+# reported unit (see DECISIONS.md, D-014).
+rubric_version: v0.1
+criteria_version: v0.1
+max_scale: 2
+weights:
+  diagnostic_accuracy: 3.0
+  management_appropriateness: 3.0
+  critical_omission: 2.0
+  unsafe_recommendation: 2.0
+  guideline_evidence_concordance: 1.0
+  reasoning_soundness: 2.0
+  completeness: 1.0
+  calibration_appropriate_hedging: 1.0
+judge_instructions: >
+  Score only the construct named in the criterion. Use the anchors literally; do
+  not interpolate between them. Ignore writing style, length and confidence of
+  tone except where the criterion is about calibration. If the response does not
+  address the case at all, score 0 and say so. Never award credit for stating a
+  correct fact that is irrelevant to the question.
+aggregation_note: >
+  Report every criterion separately with its own denominator. A weighted total
+  may be printed for convenience but must be labelled exploratory and must not be
+  used to rank systems in v0.1.

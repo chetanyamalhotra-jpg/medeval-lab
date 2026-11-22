@@ -1,0 +1,1879 @@
+{
+  "toolkit_version": "0.1.0",
+  "items_version": "v0.1",
+  "datasets": [
+    {
+      "dataset": "medmcqa",
+      "split": "validation",
+      "n_items": 4183,
+      "licence": "apache-2.0",
+      "licence_evidence": "https://huggingface.co/api/datasets/openlifescienceai/medmcqa -> cardData.license=['apache-2.0']",
+      "repo_id": "openlifescienceai/medmcqa",
+      "load_strategy": "datasets.load_dataset",
+      "source_detail": "rows read via datasets.load_dataset",
+      "fingerprint": "5266466ff15ffd33194917363c3e42516a93ec34aa73dce846bacb84b64b1918",
+      "duplicates": {
+        "n_items": 4183,
+        "n_exact_groups": 20,
+        "n_near_groups": 12,
+        "n_option_set_groups": 88,
+        "threshold": 0.85,
+        "shingle_size": 3,
+        "n_flagged_items": 64,
+        "flagged_item_ids": [
+          "01b1ae45-1e78-43e1-bc18-a13e07539645",
+          "0827b7a4-82ff-4ede-bd25-21da1822eb9c",
+          "09ce3345-10ca-4ade-91b7-8b1361c55c99",
+          "0e84d442-cf46-4dde-a0dc-42f862dd171f",
+          "127f11db-dde3-4ebf-9748-9c2e56708e84",
+          "156f862e-9e92-4070-b0f0-7beacc93d11b",
+          "17d0239b-33ee-44d0-9891-81a283b13b55",
+          "1b18ac4d-8101-48f1-bcc9-b53391c550ab",
+          "1d405e6b-5cd9-4ff7-ba6d-f7f748ad6050",
+          "1d7028cb-08b7-422e-8feb-26392e8f97dc",
+          "21e05454-2eb6-40fe-b3a4-99d2342e5b9a",
+          "2e82399f-9cef-4ba7-ae0e-9424c0efc321",
+          "32911eb7-ec0f-4745-b62c-ce3ed4897eea",
+          "363aca43-6b66-4640-9cfe-93057f5c50f1",
+          "376472be-1031-446f-abbd-f35a14669d7f",
+          "3b150083-1a5e-49ef-bc36-41a06b677b32",
+          "3b5e1975-f74b-426e-8869-43b353f8a100",
+          "41a7eb65-1e8e-46ee-8d9a-8544101fe4db",
+          "4506e30a-65c0-48a5-86db-595e5084787c",
+          "4719558d-09ca-4c85-9bf8-454e80a138aa",
+          "48306148-c874-49d5-b66e-ebf71d01ca92",
+          "4fbc569b-3b88-490f-b1b9-0af7c459eee0",
+          "51009d05-2b8f-491d-8865-d2f01cf3647b",
+          "51baa169-5c84-4d0e-94fb-d21279cea570",
+          "57b1ba32-ffad-47ac-b906-d1b6dbca3bc6",
+          "59020852-ed4d-4f44-932b-98da5cd0f47b",
+          "5c99553b-a9ad-4919-add4-93a6487f139c",
+          "5e446222-7eea-4c61-9769-7b62fedae0b2",
+          "608ee01c-9e31-4688-a5b3-eaab8ca54795",
+          "60e4c703-caf9-4e1c-a6d8-fcbaeae819d4",
+          "61461258-c43a-48bf-9ecb-3c6450e12912",
+          "638442d9-e6dd-42a0-9803-9042d9a88e09",
+          "63f0f575-0417-4352-94c2-2a8055fe3739",
+          "66f9e092-4410-42f2-841c-588c65c9384c",
+          "6bfb7ced-ef9e-4df7-ae35-ce5699bbc7a5",
+          "6c1d34b8-cd40-4ca9-8d17-c64a1fde6a83",
+          "710786df-02cc-4b3f-9ac1-31bc90e56426",
+          "72676291-2690-40d6-b2f1-30cfdb015e45",
+          "7719be4d-bbfc-4cdc-a70a-a543b0f5403b",
+          "7ddf1f3b-5c7c-4f2d-b208-f01ea72e1a70",
+          "80e16084-d58b-4584-8712-feb0dda14e36",
+          "81ba27b9-0517-444f-b592-db6a7f23c69c",
+          "85cb22b1-2b4f-4ee5-bdc0-75561bef3ac2",
+          "91f22318-7737-491a-8096-d504ac9c8aae",
+          "9cc1de2b-127b-49fa-8f8e-6f26c058418d",
+          "a1a5bb6c-c9f8-4c6f-874c-8be9255e7314",
+          "a43a0fc3-9d61-45a2-8ebd-f90bb31af019",
+          "a5e849d9-c662-4105-9637-5d870028c593",
+          "ac97880a-0862-45cf-bed5-a2000a93343c",
+          "aceab90d-6cc0-4cac-82d4-8fcda05ea933",
+          "b0b23ecd-6076-476c-935b-a6384c8474ff",
+          "b3fbb3fa-16e3-4275-920b-aa7f7d8ef831",
+          "b78e3c97-dc54-4c08-9b4e-b38187a48cf8",
+          "c1ad828e-687d-4f0b-b014-9b0b5555548e",
+          "c30d00e9-dc5c-43fd-9514-b0dd23249546",
+          "c3b4d610-571b-4e86-be27-d41b8b2efc65",
+          "c836b9a4-0181-424c-a961-88278c54eceb",
+          "ce49098b-cc48-4168-859e-936e3e0c7459",
+          "cf0999e9-859a-493a-9746-bd5bbdc4f664",
+          "defe1c85-63fe-4a16-ba10-b3749975818a",
+          "edd2f617-40bb-4a40-9598-059172c2618f",
+          "ee904a2e-7494-46ef-b976-22be596ed44f",
+          "f23569ea-da84-4e74-aa14-69c64f04424d",
+          "f4ea9cd2-e0a7-41e2-ab75-fe54a8bee24e"
+        ],
+        "groups": [
+          {
+            "kind": "exact",
+            "item_ids": [
+              "60e4c703-caf9-4e1c-a6d8-fcbaeae819d4",
+              "0827b7a4-82ff-4ede-bd25-21da1822eb9c"
+            ],
+            "row_indices": [
+              80,
+              681
+            ],
+            "similarity": 1.0,
+            "example": "Skeletal muscles"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "3b150083-1a5e-49ef-bc36-41a06b677b32",
+              "59020852-ed4d-4f44-932b-98da5cd0f47b"
+            ],
+            "row_indices": [
+              201,
+              2472
+            ],
+            "similarity": 1.0,
+            "example": "Major aim of phase 1 clinical trials is:"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "81ba27b9-0517-444f-b592-db6a7f23c69c",
+              "1b18ac4d-8101-48f1-bcc9-b53391c550ab"
+            ],
+            "row_indices": [
+              217,
+              316
+            ],
+            "similarity": 1.0,
+            "example": "Acetazolamide is given to a patient of angle closure glaucoma. It is a non-competitive inhibitor of carbonic anhydrase enzyme. Which of the following should be "
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "51baa169-5c84-4d0e-94fb-d21279cea570",
+              "c836b9a4-0181-424c-a961-88278c54eceb"
+            ],
+            "row_indices": [
+              252,
+              2328
+            ],
+            "similarity": 1.0,
+            "example": "Cleaning of base metal alloy is done by"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "7ddf1f3b-5c7c-4f2d-b208-f01ea72e1a70",
+              "5c99553b-a9ad-4919-add4-93a6487f139c"
+            ],
+            "row_indices": [
+              308,
+              1852
+            ],
+            "similarity": 1.0,
+            "example": "The function of a sprue is to"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "ee904a2e-7494-46ef-b976-22be596ed44f",
+              "f4ea9cd2-e0a7-41e2-ab75-fe54a8bee24e"
+            ],
+            "row_indices": [
+              455,
+              2966
+            ],
+            "similarity": 1.0,
+            "example": "Subantimicrobial dose of doxycycline is"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "c1ad828e-687d-4f0b-b014-9b0b5555548e",
+              "7719be4d-bbfc-4cdc-a70a-a543b0f5403b"
+            ],
+            "row_indices": [
+              513,
+              2209
+            ],
+            "similarity": 1.0,
+            "example": "All are true about RVG except:"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "c3b4d610-571b-4e86-be27-d41b8b2efc65",
+              "156f862e-9e92-4070-b0f0-7beacc93d11b"
+            ],
+            "row_indices": [
+              545,
+              1663
+            ],
+            "similarity": 1.0,
+            "example": "Major determinant of loading dose of a drug is"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "48306148-c874-49d5-b66e-ebf71d01ca92",
+              "638442d9-e6dd-42a0-9803-9042d9a88e09"
+            ],
+            "row_indices": [
+              729,
+              1234
+            ],
+            "similarity": 1.0,
+            "example": "All of the following bones are involves in wrist joint formation EXCEPT?"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "61461258-c43a-48bf-9ecb-3c6450e12912",
+              "51009d05-2b8f-491d-8865-d2f01cf3647b"
+            ],
+            "row_indices": [
+              925,
+              3212
+            ],
+            "similarity": 1.0,
+            "example": "The reverse bevel incision is made to"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "127f11db-dde3-4ebf-9748-9c2e56708e84",
+              "01b1ae45-1e78-43e1-bc18-a13e07539645"
+            ],
+            "row_indices": [
+              1036,
+              1885
+            ],
+            "similarity": 1.0,
+            "example": "Glossy smooth margins of a casting are due to:"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "ac97880a-0862-45cf-bed5-a2000a93343c",
+              "4719558d-09ca-4c85-9bf8-454e80a138aa"
+            ],
+            "row_indices": [
+              1389,
+              2653
+            ],
+            "similarity": 1.0,
+            "example": "The treatment of choice for stage I cancer larynx is-"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "363aca43-6b66-4640-9cfe-93057f5c50f1",
+              "0e84d442-cf46-4dde-a0dc-42f862dd171f"
+            ],
+            "row_indices": [
+              1395,
+              1827
+            ],
+            "similarity": 1.0,
+            "example": "Major mechanism of action of nitrates in acute attack of angina is:"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "41a7eb65-1e8e-46ee-8d9a-8544101fe4db",
+              "57b1ba32-ffad-47ac-b906-d1b6dbca3bc6"
+            ],
+            "row_indices": [
+              1443,
+              3146
+            ],
+            "similarity": 1.0,
+            "example": "A hypeensive patient was on metoprolol treatment. Verapamil was added to the therapy of this patient. This can result in:-"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "80e16084-d58b-4584-8712-feb0dda14e36",
+              "b78e3c97-dc54-4c08-9b4e-b38187a48cf8"
+            ],
+            "row_indices": [
+              1601,
+              3473
+            ],
+            "similarity": 1.0,
+            "example": "GNAS-1 gene mutation is associated with"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "66f9e092-4410-42f2-841c-588c65c9384c",
+              "91f22318-7737-491a-8096-d504ac9c8aae"
+            ],
+            "row_indices": [
+              2340,
+              2342
+            ],
+            "similarity": 1.0,
+            "example": "Mean and standard deviation can be worked out only if data is on"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "aceab90d-6cc0-4cac-82d4-8fcda05ea933",
+              "376472be-1031-446f-abbd-f35a14669d7f"
+            ],
+            "row_indices": [
+              2380,
+              3560
+            ],
+            "similarity": 1.0,
+            "example": "8 year old child had fractured his maxillary central incisor 10 months ago. The pulp shows no response. There is no periapical lesion in the radiograph. The tre"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "09ce3345-10ca-4ade-91b7-8b1361c55c99",
+              "edd2f617-40bb-4a40-9598-059172c2618f"
+            ],
+            "row_indices": [
+              2640,
+              4177
+            ],
+            "similarity": 1.0,
+            "example": "Morphine should not be used in the treatment of:"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "b3fbb3fa-16e3-4275-920b-aa7f7d8ef831",
+              "defe1c85-63fe-4a16-ba10-b3749975818a"
+            ],
+            "row_indices": [
+              2754,
+              3331
+            ],
+            "similarity": 1.0,
+            "example": "The cribriform plate connects"
+          },
+          {
+            "kind": "exact",
+            "item_ids": [
+              "21e05454-2eb6-40fe-b3a4-99d2342e5b9a",
+              "608ee01c-9e31-4688-a5b3-eaab8ca54795"
+            ],
+            "row_indices": [
+              3035,
+              3900
+            ],
+            "similarity": 1.0,
+            "example": "Incomplete casting is the result of"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "ce49098b-cc48-4168-859e-936e3e0c7459",
+              "a43a0fc3-9d61-45a2-8ebd-f90bb31af019"
+            ],
+            "row_indices": [
+              7,
+              3988
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following are not a branch of external carotid Aery in Kiesselbach's plexus."
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "67add9f9-94b5-40b2-904d-fb4965fb8309",
+              "743f2305-10ed-4d66-b6fa-911cacdf2622"
+            ],
+            "row_indices": [
+              34,
+              917
+            ],
+            "similarity": 1.0,
+            "example": "In Erythroblastosis fetalis not involved is –"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "5ce754b8-b358-4270-9bd1-8828700a19b1",
+              "b3163789-82b3-4054-aabe-3a2b90aa7a98",
+              "9a29cd2c-e0d3-4d1e-82a7-32af10b47c9b",
+              "d0aaea50-8928-4b40-ad20-7161f679bbc0",
+              "ea356491-9065-46ad-b1d2-bfed7eb2d2ca",
+              "b22457e3-c620-4a3d-bde1-0aa6e6c185a7",
+              "afd502ff-b700-4ecf-acec-f849331dd1ed"
+            ],
+            "row_indices": [
+              45,
+              400,
+              1185,
+              1577,
+              2079,
+              2565,
+              3954
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following blade angle is appropriate for scaling and root planing"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "06cab4ad-fb49-4daa-92db-5ee3529af02f",
+              "93c4a1a4-7b8b-4d71-b246-3125604bc899",
+              "9c1d56d9-5f46-4d3f-87e6-894a31c98f27",
+              "ca191087-1d29-41a5-bf8b-0bae2acebae3"
+            ],
+            "row_indices": [
+              52,
+              664,
+              984,
+              3605
+            ],
+            "similarity": 1.0,
+            "example": "Retraction of mandible is achieved by:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "0e7917ea-310b-4477-9897-f4901f728448",
+              "714eb700-67f2-4ce9-ab0d-ffdf8660ac08",
+              "3a3e9d0e-cf13-4d9c-971f-f9d5cb902994",
+              "1a31abe7-fbc1-41bc-b42d-fab66edfef39"
+            ],
+            "row_indices": [
+              59,
+              487,
+              914,
+              3014
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following lipoproteins does not move towards charged end in electrophoresis?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "dd210467-68c5-4566-9cad-34e5ffa22bc9",
+              "5a081b96-4228-4b6a-b775-6a70e294cbb5",
+              "bd1f87b7-50d6-4060-a9a3-f281c15a1898"
+            ],
+            "row_indices": [
+              122,
+              3249,
+              3429
+            ],
+            "similarity": 1.0,
+            "example": "Which primary tooth resemble premolar"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "5a49f825-bf30-48d5-a10d-5bf1a3f5dd1c",
+              "87da7c54-7d62-4641-a820-0cdd9a4fcbc6"
+            ],
+            "row_indices": [
+              181,
+              2382
+            ],
+            "similarity": 1.0,
+            "example": "Characteristic histopathological feature of basal cell car cinoma is"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "3b150083-1a5e-49ef-bc36-41a06b677b32",
+              "59020852-ed4d-4f44-932b-98da5cd0f47b"
+            ],
+            "row_indices": [
+              201,
+              2472
+            ],
+            "similarity": 1.0,
+            "example": "Major aim of phase 1 clinical trials is:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "b687604e-5145-4aa3-ba07-56c624e501ec",
+              "82b0de7a-8e54-4c49-a872-9170f2d7b599"
+            ],
+            "row_indices": [
+              203,
+              2667
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following defines the pressure in the vascular system in the absence of blood flow? (Asked twice)"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "00667233-3ef5-4759-bac2-850f41c6cdfc",
+              "700240f4-b59e-4dcb-a1c1-0d082a4b9643",
+              "ee3ac036-6513-4b0a-a7f3-6b158504e9bd",
+              "19afce3e-10f9-4d17-95ad-58e6de9f4ca2"
+            ],
+            "row_indices": [
+              211,
+              1352,
+              3491,
+              4117
+            ],
+            "similarity": 1.0,
+            "example": "Minimum number of lobes require to form a tooth"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "46c8e8cf-5930-486f-ad11-99b9339c12ab",
+              "00eaa1c4-c041-4172-ab04-51205c84410f"
+            ],
+            "row_indices": [
+              257,
+              4011
+            ],
+            "similarity": 1.0,
+            "example": "Reticular fibers of collagen tissues are present in all of the following except:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "5682860b-5ef4-4c1d-88b4-eb81546548ba",
+              "0f8e11c2-a438-4c71-86fb-e302e5852a05"
+            ],
+            "row_indices": [
+              266,
+              2252
+            ],
+            "similarity": 1.0,
+            "example": "Kamlesh, a 2 year old girl, has Down's syndrome. Her karyotype is 21/21 translocation. What is the risk ofrecurrence in subsequent pregnancies if the father is "
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "c86f02db-18ea-4ef1-a03a-1bee6d661c7b",
+              "52638912-d9ec-4e6c-91a8-01e73bbeefd2"
+            ],
+            "row_indices": [
+              276,
+              968
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is not an example of a syndrome caused by uniparental disomy?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "fd315adc-df4b-4a81-895b-6f093eeb71b2",
+              "6d9630ba-dad1-4241-aac6-e09dd761a9c1",
+              "018e350b-8675-4b2d-99a2-eba98fe07f31"
+            ],
+            "row_indices": [
+              298,
+              1256,
+              2167
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is an indiction for tonsillectomy –a) Rheumatic feverb) Glomerulonephritisc) Recurrent upper respiratory infectiond) Persistent carrier o"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "7ddf1f3b-5c7c-4f2d-b208-f01ea72e1a70",
+              "5c99553b-a9ad-4919-add4-93a6487f139c"
+            ],
+            "row_indices": [
+              308,
+              1852
+            ],
+            "similarity": 1.0,
+            "example": "The function of a sprue is to"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "80066b5e-d621-4912-b7fd-f1e867a9c8d4",
+              "dff05507-4258-4cee-97a0-0327dd30b57f"
+            ],
+            "row_indices": [
+              340,
+              1609
+            ],
+            "similarity": 1.0,
+            "example": "Renal feed for CKD patients-"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "c70d078e-2a95-4779-b8d5-6050a5b58394",
+              "c32b760b-1412-41f9-9542-45885fa19cee"
+            ],
+            "row_indices": [
+              348,
+              2408
+            ],
+            "similarity": 1.0,
+            "example": "Minimum concentration of oxygen needed in NO analgesia"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "a7e312f2-177e-4acf-9ac9-f68f6cb484ea",
+              "0c32cd85-9912-4116-86ce-d65b19a77be9"
+            ],
+            "row_indices": [
+              353,
+              1449
+            ],
+            "similarity": 1.0,
+            "example": "Antibody in chronic allergy ?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "0f2fc319-7fca-4f39-b2e9-be49e7abe79d",
+              "242d1a23-0032-4565-99cc-ebf7d8fc54aa"
+            ],
+            "row_indices": [
+              364,
+              2203
+            ],
+            "similarity": 1.0,
+            "example": "Chemotactic cytokine is"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "d2f3fa53-c024-4179-bf34-169fd7b99fc9",
+              "bccac3f6-359f-4795-93a7-1b32d014bce0",
+              "425262d7-1238-4195-a713-1cb8befefd2d"
+            ],
+            "row_indices": [
+              443,
+              870,
+              3596
+            ],
+            "similarity": 1.0,
+            "example": "Anti-centromere antibodies seen in which of the followings conditions:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "4135c1a9-44e4-4872-a329-3cc4b7c1a587",
+              "031bf440-dc4a-4278-8ab5-1237ab831337"
+            ],
+            "row_indices": [
+              449,
+              736
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is common to both zinc eugenol cement and polycarboxylate cement?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "64fefa75-a0d1-45da-a81b-961ed7565c9c",
+              "17d0239b-33ee-44d0-9891-81a283b13b55",
+              "4506e30a-65c0-48a5-86db-595e5084787c"
+            ],
+            "row_indices": [
+              450,
+              1426,
+              2045
+            ],
+            "similarity": 1.0,
+            "example": "What is the drug of choice of Bacterial vaginosis in pregnancy"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "ee904a2e-7494-46ef-b976-22be596ed44f",
+              "f4ea9cd2-e0a7-41e2-ab75-fe54a8bee24e"
+            ],
+            "row_indices": [
+              455,
+              2966
+            ],
+            "similarity": 1.0,
+            "example": "Subantimicrobial dose of doxycycline is"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "6bd02755-f813-46d8-87ff-e40297a2a949",
+              "caec1fed-b5cf-4aa1-98bd-0c0806992f06"
+            ],
+            "row_indices": [
+              516,
+              1740
+            ],
+            "similarity": 1.0,
+            "example": "In female adrenal gland secretes which hormone?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "c3b4d610-571b-4e86-be27-d41b8b2efc65",
+              "156f862e-9e92-4070-b0f0-7beacc93d11b"
+            ],
+            "row_indices": [
+              545,
+              1663
+            ],
+            "similarity": 1.0,
+            "example": "Major determinant of loading dose of a drug is"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "3b514c9e-965c-463a-b141-9dcecd91c957",
+              "c839b148-d464-4420-9f5d-d66be78d0fd5",
+              "c638cfdd-4eb0-49ad-8580-fe9ba51118ef"
+            ],
+            "row_indices": [
+              592,
+              2384,
+              2516
+            ],
+            "similarity": 1.0,
+            "example": "Initial calcification of crown represents Which Nolla's stage:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "63f0f575-0417-4352-94c2-2a8055fe3739",
+              "3b5e1975-f74b-426e-8869-43b353f8a100"
+            ],
+            "row_indices": [
+              705,
+              1843
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following statements about high copper silver alloy compared to conventional alloy is not true?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "48306148-c874-49d5-b66e-ebf71d01ca92",
+              "638442d9-e6dd-42a0-9803-9042d9a88e09"
+            ],
+            "row_indices": [
+              729,
+              1234
+            ],
+            "similarity": 1.0,
+            "example": "All of the following bones are involves in wrist joint formation EXCEPT?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "789aa0f7-2666-4950-be7e-42b03b1b1a44",
+              "e59d484d-0bf8-4440-9a83-29c6521a2d6d"
+            ],
+            "row_indices": [
+              765,
+              1333
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following has intracellular receptor -"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "c0bf19ac-df23-4d2b-8a88-0b2f256fed66",
+              "baf1db57-4ba1-4730-ae61-be7c5ae948d0",
+              "6fd97ba4-209d-4683-b354-991c93cc0572"
+            ],
+            "row_indices": [
+              810,
+              1371,
+              3243
+            ],
+            "similarity": 1.0,
+            "example": "A 12 - year - old boy had a cut in his forearm 4 days ago. Now the bleeding has been stopped due to granulation tissue formation. While taking a skin biopsy a p"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "2b110e57-8338-4189-86e2-cbea7d761c30",
+              "d9801e88-03ce-46a5-87fe-fa3d8b61fadf"
+            ],
+            "row_indices": [
+              828,
+              2476
+            ],
+            "similarity": 1.0,
+            "example": "A diabetic patient presented with uncontrolled blood sugar level. He has history of pancreatitis and family history of urinary bladder carcinoma. He does not wa"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "61461258-c43a-48bf-9ecb-3c6450e12912",
+              "51009d05-2b8f-491d-8865-d2f01cf3647b"
+            ],
+            "row_indices": [
+              925,
+              3212
+            ],
+            "similarity": 1.0,
+            "example": "The reverse bevel incision is made to"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "127f11db-dde3-4ebf-9748-9c2e56708e84",
+              "01b1ae45-1e78-43e1-bc18-a13e07539645"
+            ],
+            "row_indices": [
+              1036,
+              1885
+            ],
+            "similarity": 1.0,
+            "example": "Glossy smooth margins of a casting are due to:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "433889ad-6b7a-4b52-b45d-2e2379f81d5e",
+              "34c40855-d9e8-48a6-aedd-c214e19de1fd"
+            ],
+            "row_indices": [
+              1143,
+              3582
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following finger has two dorsal interossei (AIIMS May 2019)"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "770a2934-5df3-4d53-a79c-0d4358b95016",
+              "e5e8e766-7a60-497c-80f9-842c60f4e1a4"
+            ],
+            "row_indices": [
+              1145,
+              2884
+            ],
+            "similarity": 1.0,
+            "example": "In a female, intraocular metastasis most commonly occurs from which of the following gynaecological primary?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "285a31c4-9b01-416d-956d-82fa46d60bbb",
+              "4fe74ce2-d331-467a-b577-889121306734"
+            ],
+            "row_indices": [
+              1228,
+              4100
+            ],
+            "similarity": 1.0,
+            "example": "Percentage of surgical site infection in patients with clean contaminated wound after prophylactic antibiotic?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "2aacf8d1-b36e-49be-8333-af91aa2a49c9",
+              "3aff7082-0082-4114-a47b-d68bf127c263"
+            ],
+            "row_indices": [
+              1238,
+              2308
+            ],
+            "similarity": 1.0,
+            "example": "Cells affected in glaucomatous optic neuropathy are:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "026d473e-9f24-45f9-8a98-43045be5c30e",
+              "db415125-a13c-4e21-80fe-b3034ad74f44"
+            ],
+            "row_indices": [
+              1251,
+              2365
+            ],
+            "similarity": 1.0,
+            "example": "Average Diameter of Apical foramen in an 18-25 years old adult is"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "0489f20c-a0ce-4251-9eec-e8d5e691a49e",
+              "41a7eb65-1e8e-46ee-8d9a-8544101fe4db",
+              "57b1ba32-ffad-47ac-b906-d1b6dbca3bc6"
+            ],
+            "row_indices": [
+              1277,
+              1443,
+              3146
+            ],
+            "similarity": 1.0,
+            "example": "A patient of hypeension on Metoprolol, Verapamil was given. This is will result in?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "e9474805-33d3-4db9-a0dd-a7171bd262a6",
+              "6dfdea6c-4c96-49dc-8b65-a57b59d87036"
+            ],
+            "row_indices": [
+              1313,
+              1702
+            ],
+            "similarity": 1.0,
+            "example": "Type of cry, which is not a cry at all, there are no tears, no sobs, just a constant whining noise:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "1b4a2a96-cd33-4ccd-bf13-3c208a07983a",
+              "b9ad0558-8257-4446-bcae-f264097ab0a5"
+            ],
+            "row_indices": [
+              1378,
+              1579
+            ],
+            "similarity": 1.0,
+            "example": "A patient presents to the ER after a A with multiple rib injuries. He is conscious, speaking single words. RR = 40/min, BP= 90/40 mmHg. What is the next immedia"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "6cb20456-8f6a-44d9-8aad-9d45b621d210",
+              "7ee6d817-eee3-42ad-8d49-7237f375f6f3"
+            ],
+            "row_indices": [
+              1383,
+              3838
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is used for laboratory diagnosis of alcoholic hepatitis?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "ac97880a-0862-45cf-bed5-a2000a93343c",
+              "4719558d-09ca-4c85-9bf8-454e80a138aa"
+            ],
+            "row_indices": [
+              1389,
+              2653
+            ],
+            "similarity": 1.0,
+            "example": "The treatment of choice for stage I cancer larynx is-"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "c4256578-82f3-4cb8-891a-be9864c80547",
+              "5907e711-096f-4251-aea5-042f65debd5b"
+            ],
+            "row_indices": [
+              1393,
+              2631
+            ],
+            "similarity": 1.0,
+            "example": "Most commonly used route of administration of heparin for post-operative thromboprophylaxis is?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "e69b4af9-37f2-4406-b962-bf7ebe20bc01",
+              "a516861d-a265-4849-93b4-3b4440c68ecf"
+            ],
+            "row_indices": [
+              1411,
+              1619
+            ],
+            "similarity": 1.0,
+            "example": "Both bone and disc spaces are destroyed in-"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "1dc8c68f-0e81-40f3-860d-cfcc8d07be2a",
+              "44c704bc-4331-45a6-b6a8-dd8a5a0b7d18"
+            ],
+            "row_indices": [
+              1431,
+              2266
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following hormone is/are under inhibitory control of hypyothalamus?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "f2f90872-25be-4295-9e2c-26f8310a2100",
+              "52d643b9-6455-43f0-a04e-a838bf1ba1c8"
+            ],
+            "row_indices": [
+              1460,
+              2668
+            ],
+            "similarity": 1.0,
+            "example": "In chronic renal failure : a) Urine output is more than 3 litres per dayb) Urine concentration is decreasedc) Sodium conservation is poord) Polycythemia is pres"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "72676291-2690-40d6-b2f1-30cfdb015e45",
+              "cf0999e9-859a-493a-9746-bd5bbdc4f664"
+            ],
+            "row_indices": [
+              1467,
+              3567
+            ],
+            "similarity": 1.0,
+            "example": "Injection Glucagon is effective for management of persistent hypoglycemia in all, except –"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "f00b5f5a-9a4e-4003-ad33-12ede354b4d9",
+              "09b9375c-41ee-4295-ad27-2a11074d4434"
+            ],
+            "row_indices": [
+              1483,
+              3806
+            ],
+            "similarity": 1.0,
+            "example": "Tumor represented T3N2M0 is classified as :"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "2ef81315-d954-4729-87c9-20a5d20da4a8",
+              "e5be7962-590f-4590-bb2b-84860a14a42a",
+              "747359d5-2ce7-439e-b229-d04381853421",
+              "c41e6817-ab7a-4208-aa4b-d89da0668ac9",
+              "9b357d4d-8a53-4939-9ff7-bb6f72c53bb6"
+            ],
+            "row_indices": [
+              1530,
+              2021,
+              2324,
+              2642,
+              3118
+            ],
+            "similarity": 1.0,
+            "example": "On massive blood transfusion the following complication occurs-"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "22f37095-b0aa-4603-a72d-8594c37b6f7e",
+              "dc248bc1-20c6-4aca-a7db-3642df59fe8a"
+            ],
+            "row_indices": [
+              1533,
+              3699
+            ],
+            "similarity": 1.0,
+            "example": "Which process shows phases of acute inflammation-"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "1f5885bd-7146-46de-87b8-f32ae199ce7c",
+              "d944e920-790f-44c4-9201-c7525f358088",
+              "dd032c3c-d1fc-42c9-bdbf-09d5fcef74fd"
+            ],
+            "row_indices": [
+              1535,
+              2338,
+              3156
+            ],
+            "similarity": 1.0,
+            "example": "HDL is synthesised in"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "2cdf4e3d-5ee5-460c-b03c-d064ce8182b7",
+              "6bc9b299-ba4b-403a-bb2b-274923352705",
+              "852daded-7198-4d4a-94df-f3bc1ab8938c"
+            ],
+            "row_indices": [
+              1546,
+              2080,
+              3783
+            ],
+            "similarity": 1.0,
+            "example": "Bacteriocidal toxin is found in:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "fade5c9e-4f2d-4cfd-90e3-99a69f09fbf9",
+              "5ec6e275-1772-4d73-8776-77b38eb82ef2"
+            ],
+            "row_indices": [
+              1646,
+              2789
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following drug has gametocidal action all species of Plasmodium?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "a28af149-bf4b-4c9a-a4bf-5f6387f945e9",
+              "c195d683-b268-4ae5-b96d-b50d870a2128",
+              "e8b18049-9725-4ab5-89ad-2799af470822",
+              "90d38496-3baf-4df8-a4ce-5210d0dbfa0f"
+            ],
+            "row_indices": [
+              1665,
+              2486,
+              3147,
+              3347
+            ],
+            "similarity": 1.0,
+            "example": "A young patient has been admitted with A and had massive hemorrhage. He needs to be transfused with large amounts of fluids. Which IV cannula is preferred?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "dc3b4878-5fcb-4cd0-b31d-594a5320655a",
+              "636a3c09-3bda-40dd-bf94-c497bd39d8f6"
+            ],
+            "row_indices": [
+              1674,
+              3919
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is not used in hea failure?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "b7d8bd74-0651-43ca-9284-f29321e22628",
+              "f361defb-1a36-496f-b195-9dcb6bb31ea5"
+            ],
+            "row_indices": [
+              1726,
+              3306
+            ],
+            "similarity": 1.0,
+            "example": "As per mental health care act, an individual with a known psychotic disorder on treatment and is not a minor, can choose to decide the caretaker and the course "
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "64dbc15a-1052-4e21-8f02-e83da8a1e157",
+              "44f185f0-7a8e-406c-a33a-b2d7d54e7a25"
+            ],
+            "row_indices": [
+              1728,
+              3251
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is the most commonly used drug for management of community acquired pneumonia?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "32911eb7-ec0f-4745-b62c-ce3ed4897eea",
+              "6bfb7ced-ef9e-4df7-ae35-ce5699bbc7a5"
+            ],
+            "row_indices": [
+              1785,
+              3206
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is not a monomeric intermediate filament?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "7be32b1f-e535-4f51-95e1-2dc3d223d9bc",
+              "4a073cec-41b0-49ef-aa57-a010c2bfe5d9"
+            ],
+            "row_indices": [
+              1823,
+              3673
+            ],
+            "similarity": 1.0,
+            "example": "The first sensation to be lost following administration of local anesthetic is"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "744e4dce-b8f1-447f-a964-bea1bbe98edf",
+              "2e268767-aa15-4fa6-9628-3f586ab729f9"
+            ],
+            "row_indices": [
+              1862,
+              2474
+            ],
+            "similarity": 1.0,
+            "example": "Liver is divided into eight segments according to Couinaud's classification based upon"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "74340a21-07b9-4e61-92a5-d4e4fb270de6",
+              "cbf6cefb-7428-4d61-9940-03967a1a56b8"
+            ],
+            "row_indices": [
+              1947,
+              3926
+            ],
+            "similarity": 1.0,
+            "example": "ECG shows a mean axis of 90 degrees. In which of the following would be present the maximum voltage of R wave?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "8bbcb007-44f0-460f-9e73-25f6006859fe",
+              "0893ecf7-8416-4784-8211-e63a3ca18f70"
+            ],
+            "row_indices": [
+              2015,
+              2047
+            ],
+            "similarity": 1.0,
+            "example": "Gene for Dentin mineralization"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "c8f8d5ab-7894-42c8-99fd-87a0d20a7307",
+              "2e3e408c-cf35-4f0c-87d2-1f9479b6840d"
+            ],
+            "row_indices": [
+              2026,
+              2955
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following premolars has a mesial marginal ridge more cervical than the distal marginal ridge:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "f4c75eb8-18d8-41bd-81fa-6a03e4519193",
+              "b4d9ead1-e3c7-446d-b49b-7e4dcbdada18"
+            ],
+            "row_indices": [
+              2103,
+              2836
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following does golgi tendon organ detect?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "2d98e8a0-829a-47ef-87e1-c6bbd54473a1",
+              "5a2f9e25-3acb-4830-9f18-009480595be1"
+            ],
+            "row_indices": [
+              2135,
+              3252
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is not an adverse effect of Escitalopram?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "db529a12-e737-4028-ab55-43f4e97fa109",
+              "5b2aada9-1d44-4499-b96f-89b063d9927c"
+            ],
+            "row_indices": [
+              2230,
+              2536
+            ],
+            "similarity": 1.0,
+            "example": "A 22-year-old man presents with diarrhea and intolerance to dairy products, on investigation he was found to have lactase deficiency. Agent least likely to caus"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "b98c9b26-1cf3-4d2f-80e5-ba589c91b94f",
+              "77d35e3d-ce5c-426c-91da-17f5259efafa"
+            ],
+            "row_indices": [
+              2293,
+              3258
+            ],
+            "similarity": 1.0,
+            "example": "A 2-day-old neonate in the neonatal ICU develops seizures. Which of the following would be the next best investigation for the child?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "b1cb5022-7ebd-41b5-808c-c969958bfb62",
+              "65bef933-00cc-4f7b-8ca0-a77f2fe92c57"
+            ],
+            "row_indices": [
+              2316,
+              3489
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following drug must be sold by retail only on production of a prescription by a registered medical practitioner?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "66f9e092-4410-42f2-841c-588c65c9384c",
+              "91f22318-7737-491a-8096-d504ac9c8aae"
+            ],
+            "row_indices": [
+              2340,
+              2342
+            ],
+            "similarity": 1.0,
+            "example": "Mean and standard deviation can be worked out only if data is on"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "aceab90d-6cc0-4cac-82d4-8fcda05ea933",
+              "376472be-1031-446f-abbd-f35a14669d7f"
+            ],
+            "row_indices": [
+              2380,
+              3560
+            ],
+            "similarity": 1.0,
+            "example": "8 year old child had fractured his maxillary central incisor 10 months ago. The pulp shows no response. There is no periapical lesion in the radiograph. The tre"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "212c1720-9f09-49d2-9a44-47bd914b35c9",
+              "75037cd8-82e0-4544-b8b4-39b0c3c894e8"
+            ],
+            "row_indices": [
+              2406,
+              4056
+            ],
+            "similarity": 1.0,
+            "example": "Anatomical dead space measured by -"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "753a7a8e-6da4-419b-9efb-0b74581d3992",
+              "d5d4cd74-e0f0-4e39-bc84-cc7551c627bd"
+            ],
+            "row_indices": [
+              2416,
+              4079
+            ],
+            "similarity": 1.0,
+            "example": "A patient with Tubercular meningitis was taking ATT regularly. At end of 1 month of regular intake of drugs deterioration in sensorium is noted in condition of "
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "3af11fb3-6d3b-4542-9de0-5f4decd77160",
+              "62e089d3-5425-4349-8edc-3ce132c0bf66"
+            ],
+            "row_indices": [
+              2484,
+              3689
+            ],
+            "similarity": 1.0,
+            "example": "what does not occur in 5'- 3'direction?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "dbf75aad-9f19-4edb-9fba-6245c880b59c",
+              "db180b6d-8b4e-487e-a47d-7c554c8dad2e"
+            ],
+            "row_indices": [
+              2499,
+              3568
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following show chemical bond with enamel:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "872eb991-48a8-486f-8dd8-c19b8f3cd096",
+              "37e6c503-59f9-4ba2-80b3-a7acb789c118"
+            ],
+            "row_indices": [
+              2618,
+              3048
+            ],
+            "similarity": 1.0,
+            "example": "Which anesthetic agent can cause pain on IV adminis-tration?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "a36f6ff1-cb98-42fc-953f-79b16753d993",
+              "163e1bfc-0b55-4bbe-9eb4-e18802ccfd24"
+            ],
+            "row_indices": [
+              2623,
+              2786
+            ],
+            "similarity": 1.0,
+            "example": "Mesiolingual developmental groove is seen in"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "09ce3345-10ca-4ade-91b7-8b1361c55c99",
+              "edd2f617-40bb-4a40-9598-059172c2618f"
+            ],
+            "row_indices": [
+              2640,
+              4177
+            ],
+            "similarity": 1.0,
+            "example": "Morphine should not be used in the treatment of:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "5e446222-7eea-4c61-9769-7b62fedae0b2",
+              "a5e849d9-c662-4105-9637-5d870028c593"
+            ],
+            "row_indices": [
+              2662,
+              3004
+            ],
+            "similarity": 1.0,
+            "example": "A paediatrician was called for attending a new born baby in the labour ward. The serum unconjugated bilirubin of this baby was 33 mg/dL. Which of the following "
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "bb0813aa-65ec-4eb5-8101-76df41f138e5",
+              "13e7b27f-6f0c-4366-955b-16836ed6f6cd"
+            ],
+            "row_indices": [
+              2691,
+              3658
+            ],
+            "similarity": 1.0,
+            "example": "Which is the best anticoagulant to send sample for serum electrolyte measurement?"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "b3fbb3fa-16e3-4275-920b-aa7f7d8ef831",
+              "defe1c85-63fe-4a16-ba10-b3749975818a"
+            ],
+            "row_indices": [
+              2754,
+              3331
+            ],
+            "similarity": 1.0,
+            "example": "The cribriform plate connects"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "fd8307b4-06b2-4493-bd48-46121a660315",
+              "6b2bb986-2be3-487b-a999-ffbe0b70f1fa"
+            ],
+            "row_indices": [
+              2914,
+              3408
+            ],
+            "similarity": 1.0,
+            "example": "Impedence based apex locator is:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "91aa0a58-78a7-4c75-ae0b-5dc0ada32999",
+              "f1b944e7-35c7-4ae3-aea7-3cd1d32e5249"
+            ],
+            "row_indices": [
+              3063,
+              3918
+            ],
+            "similarity": 1.0,
+            "example": "Embrasure characterized by a slight to moderate recession of interdental papilla are:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "b6b91d49-7a30-4a9a-91e6-b2f20341470c",
+              "710786df-02cc-4b3f-9ac1-31bc90e56426"
+            ],
+            "row_indices": [
+              3167,
+              3199
+            ],
+            "similarity": 1.0,
+            "example": "Normal Curvature seen in Lumbar"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "cb022556-5a47-402a-b52c-725b6c314e83",
+              "f588af9c-fc27-43ff-a9f6-2cd26f075654"
+            ],
+            "row_indices": [
+              3208,
+              3726
+            ],
+            "similarity": 1.0,
+            "example": "Sodium nitroprusside is metabolized to form an active metabolite. This active metabolized to form an active metabolite. This active metabolite of sodium nitropr"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "78229bbb-46c9-4a15-9773-055a1d9a168b",
+              "0bf8959c-a410-42df-bde1-678d021599d9"
+            ],
+            "row_indices": [
+              3808,
+              3975
+            ],
+            "similarity": 1.0,
+            "example": "Smallest mesiodistal diameter is seen in"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "c5056549-6113-4a46-ba07-180748774819",
+              "8a32a7c5-cfb7-4d49-9dfb-876850962cd6"
+            ],
+            "row_indices": [
+              3814,
+              3821
+            ],
+            "similarity": 1.0,
+            "example": "Which among the following is used for sharpening of both stainless steel and carbon steel instrument:"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "8e7413da-351b-468d-8168-961cd50bda0a",
+              "9698b531-5c6a-41f5-ad09-9eaa05779681"
+            ],
+            "row_indices": [
+              3961,
+              4066
+            ],
+            "similarity": 1.0,
+            "example": "A patient presented with intermittent fever, no weight loss, no anorexia, but with a retroperitoneal mass. Peripheral smear findings were normal. Gross & micros"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "ce49098b-cc48-4168-859e-936e3e0c7459",
+              "a43a0fc3-9d61-45a2-8ebd-f90bb31af019"
+            ],
+            "row_indices": [
+              7,
+              3988
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following are not a branch of external carotid Aery in Kiesselbach's plexus."
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "1d7028cb-08b7-422e-8feb-26392e8f97dc",
+              "85cb22b1-2b4f-4ee5-bdc0-75561bef3ac2"
+            ],
+            "row_indices": [
+              230,
+              2054
+            ],
+            "similarity": 1.0,
+            "example": "According to instrument formula given by G.V. Black, primary cutting edge angle should be:"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "4fbc569b-3b88-490f-b1b9-0af7c459eee0",
+              "2e82399f-9cef-4ba7-ae0e-9424c0efc321"
+            ],
+            "row_indices": [
+              398,
+              2755
+            ],
+            "similarity": 1.0,
+            "example": "Which of following is not a tumor suppressor gene?"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "f23569ea-da84-4e74-aa14-69c64f04424d",
+              "a1a5bb6c-c9f8-4c6f-874c-8be9255e7314"
+            ],
+            "row_indices": [
+              529,
+              3579
+            ],
+            "similarity": 1.0,
+            "example": "Which is not true about vibrio cholera"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "63f0f575-0417-4352-94c2-2a8055fe3739",
+              "3b5e1975-f74b-426e-8869-43b353f8a100"
+            ],
+            "row_indices": [
+              705,
+              1843
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following statements about high copper silver alloy compared to conventional alloy is not true?"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "17d0239b-33ee-44d0-9891-81a283b13b55",
+              "4506e30a-65c0-48a5-86db-595e5084787c"
+            ],
+            "row_indices": [
+              1426,
+              2045
+            ],
+            "similarity": 1.0,
+            "example": "Doc of bacterial vaginosis in pregnancy is"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "72676291-2690-40d6-b2f1-30cfdb015e45",
+              "cf0999e9-859a-493a-9746-bd5bbdc4f664"
+            ],
+            "row_indices": [
+              1467,
+              3567
+            ],
+            "similarity": 1.0,
+            "example": "Injection Glucagon is effective for management of persistent hypoglycemia in all, except –"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "c30d00e9-dc5c-43fd-9514-b0dd23249546",
+              "6c1d34b8-cd40-4ca9-8d17-c64a1fde6a83"
+            ],
+            "row_indices": [
+              1547,
+              3784
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is not a feature of infective endocarditis."
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "32911eb7-ec0f-4745-b62c-ce3ed4897eea",
+              "6bfb7ced-ef9e-4df7-ae35-ce5699bbc7a5"
+            ],
+            "row_indices": [
+              1785,
+              3206
+            ],
+            "similarity": 1.0,
+            "example": "Which of the following is not a monomeric intermediate filament?"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "b0b23ecd-6076-476c-935b-a6384c8474ff",
+              "1d405e6b-5cd9-4ff7-ba6d-f7f748ad6050"
+            ],
+            "row_indices": [
+              2657,
+              4046
+            ],
+            "similarity": 1.0,
+            "example": "Low apparent volume of distribution of a drug indicates That"
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "5e446222-7eea-4c61-9769-7b62fedae0b2",
+              "a5e849d9-c662-4105-9637-5d870028c593"
+            ],
+            "row_indices": [
+              2662,
+              3004
+            ],
+            "similarity": 0.931,
+            "example": "A paediatrician was called for attending a new born baby in the labour ward. The serum unconjugated bilirubin of this baby was 33 mg/dL. Which of the following "
+          },
+          {
+            "kind": "near",
+            "item_ids": [
+              "710786df-02cc-4b3f-9ac1-31bc90e56426",
+              "9cc1de2b-127b-49fa-8f8e-6f26c058418d"
+            ],
+            "row_indices": [
+              3199,
+              3484
+            ],
+            "similarity": 1.0,
+            "example": "What is normally seen in lumbar spine:-"
+          }
+        ]
+      },
+      "answer_key": {
+        "n_items": 4183,
+        "n_missing_gold": 0,
+        "n_out_of_range": 0,
+        "n_empty_question": 0,
+        "n_empty_option": 0,
+        "n_duplicate_options": 21,
+        "index_base": "zero_based",
+        "index_base_evidence": "indices span [0, 3] with 0 present, inside [0, 3]",
+        "gold_distribution": {
+          "0": 1348,
+          "1": 1085,
+          "2": 925,
+          "3": 825
+        },
+        "uniformity_p_value": 3.597770431240081e-32,
+        "always_first_accuracy": 0.3222567535261774,
+        "longest_option_accuracy": 0.3086301697346402,
+        "mean_gold_option_length": 21.746832416925653,
+        "mean_other_option_length": 20.091561080564187,
+        "conflicting_key_ids": [],
+        "conflicting_key_details": [],
+        "flagged_item_ids": [
+          "0190dc62-5b1a-48f7-b0c2-f91fb0fd66e7",
+          "0447b9a2-22ec-449c-8a23-a52c28ac6b34",
+          "16a341b0-9b1c-4a94-94a6-8f8aaa931295",
+          "1c27560a-931b-4594-8d6e-d8038663078d",
+          "2e7a8a2b-fa7c-4e90-a4fc-f9eb44674379",
+          "47e35777-f1d7-4291-81e6-6a1d1360a75c",
+          "48979fea-5d39-4c8f-ae13-8dc9421c2288",
+          "68589d4c-ad15-4989-a235-a242d226503a",
+          "6946c04c-eee9-4b9d-ad2d-dbf5ccd40b94",
+          "6b3d4b5e-8390-4a7c-b107-c819f75bd3ed",
+          "73818dbb-2bd3-4c46-a06a-b18b6ddb5450",
+          "7b32d1d8-6d89-4615-a1e4-f56d02b7339f",
+          "825a499b-6eac-41df-b015-85662bfe6aa9",
+          "8ba2ca7c-9ae4-4771-9e9c-0e44250ca6b5",
+          "8dd0ea2a-17d4-497d-93a1-a6704930a0db",
+          "965fa6a2-969e-4b51-bdb7-934a02c809f6",
+          "98ae0eca-84e2-4b3c-95e3-2920fafef1e8",
+          "9cc1de2b-127b-49fa-8f8e-6f26c058418d",
+          "a2f3d532-e063-4203-bba6-7f590a162dc7",
+          "ad581666-9c58-4d4a-a9df-8c4743715a53",
+          "be5bc61e-a128-4e46-988a-610c3baa4ba9"
+        ],
+        "notes": []
+      },
+      "contamination": {
+        "n_items": 4183,
+        "answer_in_stem_rate": 0.0002390628735357399,
+        "answer_in_stem_ids": [
+          "7ef3c754-93e0-495b-b2c0-450b883e98bd"
+        ],
+        "n_cross_dataset_pairs": 0,
+        "cross_dataset_pairs": [],
+        "screens_run": [
+          "answer-in-stem",
+          "cross-dataset overlap vs medqa_4options"
+        ],
+        "screens_not_run": [
+          "training-corpus n-gram overlap (no reference corpus available offline)",
+          "train-split memorisation probe (needs a model and a train split load)"
+        ],
+        "caveat": "Screens only. They cannot show that a model was trained on an item, and a clean screen does not make a score contamination-free."
+      },
+      "notes": [],
+      "toolkit_version": "0.1.0",
+      "items_version": "v0.1"
+    },
+    {
+      "dataset": "medqa_4options",
+      "split": "dev",
+      "n_items": 1272,
+      "licence": "cc-by-sa-4.0",
+      "licence_evidence": "https://huggingface.co/api/datasets/GBaker/MedQA-USMLE-4-options-hf -> cardData.license='cc-by-sa-4.0'",
+      "repo_id": "GBaker/MedQA-USMLE-4-options-hf",
+      "load_strategy": "direct-json",
+      "source_detail": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options-hf/resolve/main/dev.json sha256=44212909568dcdaf",
+      "fingerprint": "a75f2850856a176338b2fe5e0ea1ed229a41d0b31cd528a5a3c89df3c44a0521",
+      "duplicates": {
+        "n_items": 1272,
+        "n_exact_groups": 0,
+        "n_near_groups": 0,
+        "n_option_set_groups": 2,
+        "threshold": 0.85,
+        "shingle_size": 3,
+        "n_flagged_items": 0,
+        "flagged_item_ids": [],
+        "groups": [
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "dev-00056",
+              "dev-00592"
+            ],
+            "row_indices": [
+              56,
+              592
+            ],
+            "similarity": 1.0,
+            "example": "A 53-year-old man comes to the physician because of a 1-day history of fever and chills, severe malaise, and cough with yellow-green sputum. He works as a comme"
+          },
+          {
+            "kind": "option_set",
+            "item_ids": [
+              "dev-00180",
+              "dev-00880"
+            ],
+            "row_indices": [
+              180,
+              880
+            ],
+            "similarity": 1.0,
+            "example": "A 19-year-old man presents to the physician due to progressively worsening weakness. He also notes that he has been getting tired easily and frequently feels sh"
+          }
+        ]
+      },
+      "answer_key": {
+        "n_items": 1272,
+        "n_missing_gold": 0,
+        "n_out_of_range": 0,
+        "n_empty_question": 0,
+        "n_empty_option": 0,
+        "n_duplicate_options": 0,
+        "index_base": "zero_based",
+        "index_base_evidence": "indices span [0, 3] with 0 present, inside [0, 3]",
+        "gold_distribution": {
+          "0": 330,
+          "1": 316,
+          "2": 352,
+          "3": 274
+        },
+        "uniformity_p_value": 0.017028537816436394,
+        "always_first_accuracy": 0.25943396226415094,
+        "longest_option_accuracy": 0.2672955974842767,
+        "mean_gold_option_length": 27.660377358490567,
+        "mean_other_option_length": 26.7562893081761,
+        "conflicting_key_ids": [],
+        "conflicting_key_details": [],
+        "flagged_item_ids": [],
+        "notes": []
+      },
+      "contamination": {
+        "n_items": 1272,
+        "answer_in_stem_rate": 0.0023584905660377358,
+        "answer_in_stem_ids": [
+          "dev-00502",
+          "dev-00650",
+          "dev-01000"
+        ],
+        "n_cross_dataset_pairs": 0,
+        "cross_dataset_pairs": [],
+        "screens_run": [
+          "answer-in-stem",
+          "cross-dataset overlap vs medmcqa"
+        ],
+        "screens_not_run": [
+          "training-corpus n-gram overlap (no reference corpus available offline)",
+          "train-split memorisation probe (needs a model and a train split load)"
+        ],
+        "caveat": "Screens only. They cannot show that a model was trained on an item, and a clean screen does not make a score contamination-free."
+      },
+      "notes": [
+        "datasets.load_dataset: PermissionError: [WinError 5] Access is denied: 'C:\\\\Users\\\\chait\\\\.cache\\\\huggingface\\\\hub\\\\datasets--GBaker--MedQA-USMLE-4-options-hf'; hf-cache-arrow: FileNotFoundError: no cached arrow file for GBaker/MedQA-USMLE-4-options-hf split=dev",
+        "loaded with fallback strategy 'direct-json'; the primary datasets.load_dataset path was unavailable in this environment"
+      ],
+      "toolkit_version": "0.1.0",
+      "items_version": "v0.1"
+    }
+  ],
+  "skipped": [
+    {
+      "dataset": "pubmedqa",
+      "split": "test",
+      "reason": "RuntimeError: could not load pubmedqa/test; attempted: datasets.load_dataset: RuntimeError: Dataset scripts are no longer supported, but found pubmed_qa.py | hf-cache-arrow: FileNotFoundError: no cached arrow file for bigbio/pubmed_qa split=test"
+    }
+  ]
+}

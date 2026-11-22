@@ -1,0 +1,56 @@
+NOTICE
+======
+
+medeval-lab
+Independent, open-source Medical AI Evaluation Lab
+Copyright (c) 2026 medeval-lab contributors
+
+This project is licensed under the MIT License; the full text is in the
+`LICENSE` file. The MIT licence applies to this repository's code and original
+synthetic material only. It does not relicense third-party benchmark content.
+
+medeval-lab is a research tool. It is not a medical device, it has no clinical
+validation, and no clinician reviewed its content.
+
+Third-party runtime dependencies
+--------------------------------
+
+The project depends on open-source packages, including:
+
+- FastAPI
+- uvicorn
+- requests
+- pandas
+- numpy
+- scipy
+- matplotlib
+- PyYAML
+- jsonschema
+- python-dotenv
+
+These are third-party projects under their respective licences; see the
+installed package metadata for the exact licence and notices (for example
+`python -m pip show <package>` or the package's distribution metadata). The
+versions used for a recorded run are pinned in `requirements.txt`.
+
+Datasets
+--------
+
+This repository redistributes no benchmark data. Benchmark datasets are
+downloaded by the user under their own licences and remain the property of their
+upstream providers; item text stays in the git-ignored `data/cache/` and is not
+committed, reported or exported. Dataset sources, licences and evidence are
+recorded in `DATA_LICENSES.md` and `results/audit/datasets.csv`.
+
+Vendored code
+-------------
+
+This repository contains no third-party code vendored into it. The optional
+lm-evaluation-harness (MIT) is consumed as an external source checkout and is
+not vendored here; its licence and notices come with that checkout.
+
+Network behaviour
+-----------------
+
+The project contains no telemetry: it does not phone home, check for updates or
+collect usage. See `SECURITY.md` for the full network and data behaviour.

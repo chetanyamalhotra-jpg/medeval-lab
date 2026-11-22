@@ -1,0 +1,64 @@
+# Example headless connections file: bring your own provider and key.
+#
+# Copy this file to `connections.yaml` (git-ignored) and fill in real values.
+# Then run a plan-only pass first:
+#
+#   Copy-Item connections.example.yaml connections.yaml
+#   $env:MEDEVAL_JUDGE_A_KEY = "<your key>"      # never in the file, never in git
+#   .\.venv\Scripts\python.exe -m medeval run exp002 --connections connections.yaml
+#   # ...prints the plan and the worst-case cost, calls nothing.
+#   .\.venv\Scripts\python.exe -m medeval run exp002 --connections connections.yaml --confirm-live
+#
+# A key lives ONLY in the environment variable named by `key_env`. This file is
+# parsed before anything is called, and a file containing a `key:` field (or any
+# other field that would hold a key) is refused outright. Keys are never written
+# to run files, logs, reports or exports.
+#
+# Prices are optional and deliberately have no defaults: you copy them from your
+# provider's pricing page and put the URL in the comment. With no prices the
+# estimate says "unavailable, call cap is binding" and the call cap still stops
+# the run. Set a spend limit in your provider's dashboard as well; the
+# maintainers cannot see, stop or refund your usage.
+
+connections:
+  - name: "judge A"                     # unique; becomes the judge id in reports
+    base_url: "https://api.example.com/v1"
+    model: "<provider-model-a-id>"      # the app never guesses a model id
+    key_env: "MEDEVAL_JUDGE_A_KEY"
+    family_label: "family-a"            # judges in the same family cannot separate
+    role: judge                         # correlated error from shared family bias
+    repeats: 1
+    max_tokens: 2048
+    temperature: 0.3
+    call_cap: 200                       # per-connection hard stop, in calls
+    usd_cap: 2.0                        # per-connection hard stop, in dollars
+    # price_in_per_mtok: 0.50           # optional; from your provider's pricing
+    # price_out_per_mtok: 1.50          # page. Leave empty if unsure.
+
+  - name: "judge B"
+    base_url: "https://api.example.org/v1"
+    model: "<provider-model-b-id>"
+    key_env: "MEDEVAL_JUDGE_B_KEY"
+    family_label: "family-b"
+    role: judge
+    repeats: 1
+    max_tokens: 2048
+    temperature: 0.3
+    call_cap: 200
+    usd_cap: 2.0
+
+  # Experiment 003 additionally needs a screening model: it answers the items
+  # closed-book, and items it gets right are presumed too easy to discriminate
+  # between judges. Uncomment and fill in to run `run exp003` from the CLI.
+  # The screening model must not be a judge and must declare a different
+  # family_label from every judge.
+  # - name: "screening model"
+  #   base_url: "https://api.example.net/v1"
+  #   model: "<provider-model-s-id>"
+  #   key_env: "MEDEVAL_SCREENER_KEY"
+  #   family_label: "family-c"
+  #   role: screening
+  #   max_tokens: 1024
+  #   temperature: 0.0
+  #   call_cap: 700
+  #   usd_cap: 3.0

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>medeval-lab</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css?v=0.6.0">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Workspaces and navigation">
+      <div class="sidebar-head">
+        <div class="brand"><span class="mark" aria-hidden="true"></span>medeval-lab<span class="lab-tag">LAB</span></div>
+        <button class="ghost" id="sidebar-collapse" aria-label="Collapse sidebar" title="Collapse sidebar">⟨</button>
+      </div>
+      <button class="btn primary new-session" id="new-session">+ New session</button>
+      <nav class="workspace-list" id="workspace-list" aria-label="Workspaces"></nav>
+      <div class="sidebar-foot" id="sidebar-settings">
+        <div class="workspace-header">Settings</div>
+        <a href="#/models" data-nav="models">Models</a>
+        <a href="#/packs" data-nav="packs">Paper Packs</a>
+        <a href="#/papers" data-nav="papers">Papers</a>
+        <a href="#/tests" data-nav="tests">Tests</a>
+        <a href="#/settings" data-nav="settings">Data and licences</a>
+        <a href="#/settings" data-nav="app">App</a>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="ghost sidebar-toggle" id="sidebar-open" aria-label="Open sidebar" hidden>☰</button>
+        <span class="crumb-here" id="crumb-here"></span>
+        <div class="topbar-actions">
+          <button class="ghost" id="palette-open" aria-keyshortcuts="Control+K" title="Command palette (Ctrl+K)">Search</button>
+          <div class="theme-control" role="group" aria-label="Colour theme">
+            <button class="theme-option" data-theme-choice="auto" aria-pressed="true" title="Follow the system setting">Auto</button>
+            <button class="theme-option" data-theme-choice="light" aria-pressed="false" title="Light theme">Light</button>
+            <button class="theme-option" data-theme-choice="dark" aria-pressed="false" title="Dark theme">Dark</button>
+          </div>
+        </div>
+      </header>
+      <main id="view" tabindex="-1"></main>
+      <footer class="app-footer" data-testid="app-footer-notice">
+        Research tool — <strong>not a medical device</strong>; not for patient care or clinical
+        decisions. No clinical validation; small samples are exploratory.
+      </footer>
+    </div>
+  </div>
+
+  <div class="palette-backdrop" id="palette" hidden>
+    <div class="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+      <input id="palette-input" type="text" placeholder="Go to page, start a run, toggle theme…"
+             autocomplete="off" spellcheck="false" aria-controls="palette-list" aria-autocomplete="list">
+      <ul id="palette-list" role="listbox" aria-label="Commands"></ul>
+      <div class="palette-hint">↑ ↓ to move · Enter to run · Esc to close</div>
+    </div>
+  </div>
+
+  <div id="toast" class="banner danger" hidden style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);max-width:90vw;z-index:70"></div>
+
+  <script src="/static/app.js?v=0.6.0"></script>
+</body>
+</html>

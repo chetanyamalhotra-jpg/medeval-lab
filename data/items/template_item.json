@@ -1,0 +1,27 @@
+{
+  "id": "template-0001",
+  "text": "REPLACE: a self-contained clinical vignette written in your own words, 25-70 words, ending in a question.",
+  "options": [
+    "REPLACE: option A (do not add a letter prefix)",
+    "REPLACE: option B",
+    "REPLACE: option C",
+    "REPLACE: option D"
+  ],
+  "gold_answer": "REPLACE: must be exactly one of the options above",
+  "label_source": "paper_finding",
+  "provenance": {
+    "doi": "10.0000/REPLACE-WITH-THE-REAL-DOI",
+    "section": "Results, Table 2",
+    "licence": "cc-by-4.0",
+    "extraction_date": "2026-01-15",
+    "source_title": "REPLACE: paper title",
+    "url": null
+  },
+  "publication_date": "2024-01-01",
+  "split": "dev",
+  "version": "v0.1",
+  "review_status": "single-rater, author-reviewed",
+  "human_reference": null,
+  "task_type": "multiple_choice",
+  "notes": "One sentence on the teaching point and what makes the distractors plausible."
+}

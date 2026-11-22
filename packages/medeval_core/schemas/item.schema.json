@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medeval-lab.invalid/schemas/item.schema.json",
+  "title": "medeval-lab benchmark item",
+  "description": "A single evaluation item. Version v0.1. Items must carry complete provenance, a label source and a licence; the Python validator applies additional semantic checks that JSON Schema cannot express (gold answer present in options, DOI rules per label_source, duplicate ids).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "text",
+    "options",
+    "gold_answer",
+    "label_source",
+    "provenance",
+    "publication_date",
+    "split",
+    "version",
+    "review_status",
+    "human_reference"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$",
+      "description": "Stable identifier, lowercase. Example: seed-0001."
+    },
+    "text": {
+      "type": "string",
+      "minLength": 20,
+      "description": "The clinical stem, written in original wording."
+    },
+    "options": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Answer options without letter prefixes. Empty array means an open-ended item scored by rubric, not by exact match."
+    },
+    "gold_answer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "For multiple-choice items: verbatim text of the correct option. For open items: the reference answer text."
+    },
+    "label_source": {
+      "type": "string",
+      "enum": [
+        "paper_finding",
+        "guideline",
+        "planted_error",
+        "public_dataset_key",
+        "synthetic"
+      ]
+    },
+    "provenance": { "$ref": "#/$defs/provenance" },
+    "publication_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the source publication, or item-creation date for synthetic items."
+    },
+    "split": { "type": "string", "enum": ["dev", "hidden"] },
+    "version": { "type": "string", "pattern": "^v[0-9]+\\.[0-9]+(\\.[0-9]+)?$" },
+    "review_status": {
+      "type": "string",
+      "enum": ["single-rater, author-reviewed", "unreviewed-draft"]
+    },
+    "human_reference": {
+      "description": "Reserved for later clinician labels. Must be null in v0.1 (no clinician workflow exists yet).",
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/human_reference" }
+      ]
+    },
+    "task_type": {
+      "type": "string",
+      "enum": ["multiple_choice", "management", "interpretation", "prescribing", "other"]
+    },
+    "criterion_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free text. For planted_error items this must describe the planted error."
+    }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["doi", "section", "licence", "extraction_date"],
+      "properties": {
+        "doi": {
+          "type": ["string", "null"],
+          "pattern": "^10\\.[0-9]{4,9}/\\S+$",
+          "description": "DOI of the source publication. Null for synthetic items only."
+        },
+        "section": {
+          "type": ["string", "null"],
+          "description": "Section/table/figure of the source used for the fact."
+        },
+        "licence": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Source licence (SPDX identifier where possible) or 'synthetic-original'."
+        },
+        "extraction_date": { "type": "string", "format": "date" },
+        "source_title": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"], "format": "uri" },
+        "dataset": { "type": ["string", "null"] },
+        "dataset_revision": { "type": ["string", "null"] }
+      }
+    },
+    "human_reference": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "labels": {
+          "type": "object",
+          "description": "Per-rater labels keyed by rater id."
+        },
+        "rater_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Identifiers of human raters. Fewer than two raters cannot support agreement statistics."
+        },
+        "collected_on": { "type": "string", "format": "date" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

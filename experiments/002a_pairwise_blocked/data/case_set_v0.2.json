@@ -1,0 +1,6 @@
+{
+  "version": "v0.2",
+  "base_case_set": "../../001_judge_reliability/data/case_specs_v0.1.json",
+  "changes": [{"case_id": "case-0045", "field": "bad_response", "replacement": "The pain and bleeding are most likely gastroenteritis, so give oral rehydration and review her in the emergency department in a few hours. The positive pregnancy test is likely incidental, and her symptoms should settle with hydration. Abdominal examination can be repeated later."}],
+  "note": "The v0.1 source remains unchanged. This version removes the unsupported mention of vomiting."
+}

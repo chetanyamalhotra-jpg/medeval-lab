@@ -1,0 +1,73 @@
+# PIPELINE TEST / TEMPLATE DATA.
+# Synthetic open-ended items judged by a cross-family rubric panel.
+schema_version: 1
+id: template-rubric-panel
+version: 0.1.0
+title: "Open-ended medical QA with a cross-family judge panel (synthetic template)"
+authors: ["medeval-lab contributors"]
+year: 2026
+venue: "Synthetic pipeline template (not a published study)"
+doi_or_url: "https://github.com/medeval-lab/medeval-lab/tree/main/papers/template-rubric-panel"
+license: "CC0-1.0"
+methodology_notes:
+  kind: synthetic_pipeline_template
+  summary: >-
+    A synthetic template for open-ended answers scored by a rubric judge panel.
+    It demonstrates inter-judge agreement, a disagreement matrix and cross-family
+    error correlation; it is not a reproduction of a published rubric study.
+  limitations: >-
+    The questions and reference answers are synthetic, the rubric is generic, and
+    mock judges in a dry run say nothing about real model quality.
+task_type: open_ended_rubric
+dataset:
+  path: data/dataset.jsonl
+  format: jsonl
+  seed: 20260101
+  limit: 8
+  screening_size: 0
+  fields: {}
+prompt_template:
+  system: |
+    You are answering an open-ended research evaluation question. This is not
+    patient care and you must not give patient-specific advice. Be concise and
+    state uncertainty where it exists.
+  user: |
+    Question: $question
+
+    Answer in at most 120 words, then list which rubric points you addressed.
+graders:
+  - id: format
+    type: deterministic
+    metric: format_compliance
+  - id: panel
+    type: llm_rubric
+    prompt: |
+      You are one judge on a deliberately mixed-family evaluation panel.
+      Judge only the candidate answer against the question, reference answer and
+      rubric. Do not use outside knowledge of the model.
+
+      Question: $question
+      Reference answer: $reference_answer
+      Rubric: $rubric
+      Candidate answer: $target_answer
+
+      Return JSON only, with no prose outside it:
+      {"score": <number from $scale_min to $scale_max>, "rationale": "<one sentence>"}
+    scale_min: 1
+    scale_max: 5
+metrics:
+  primary: mean_rubric_score
+  secondary: [format_compliance]
+  comparison:
+    method: paired_bootstrap
+    alpha: 0.05
+    bootstrap_resamples: 2000
+    bootstrap_seed: 20260101
+citation:
+  bibtex: |
+    @misc{template_rubric_panel,
+      title = {Open-ended medical QA with a cross-family judge panel: a synthetic Paper Pack template},
+      author = {medeval-lab contributors},
+      year = {2026},
+      note = {Synthetic pipeline template; not a published study and not clinically validated}
+    }

@@ -1,0 +1,70 @@
+# PIPELINE TEST / TEMPLATE DATA.
+# This is a synthetic protocol scaffold, not a reproduction of a specific paper.
+schema_version: 1
+id: template-clinical-mcq
+version: 0.1.0
+title: "Clinical multiple-choice accuracy, abstention and paired comparison (synthetic template)"
+authors: ["medeval-lab contributors"]
+year: 2026
+venue: "Synthetic pipeline template (not a published study)"
+doi_or_url: "https://github.com/medeval-lab/medeval-lab/tree/main/papers/template-clinical-mcq"
+license: "CC0-1.0"
+methodology_notes:
+  kind: synthetic_pipeline_template
+  summary: >-
+    A synthetic multiple-choice template that demonstrates deterministic accuracy,
+    abstention/confidence reporting and a paired McNemar comparison between target
+    models. It does not reproduce any paper's items or results.
+  limitations: >-
+    Every item is synthetic and written for wiring tests. There is no clinical
+    validation, no clinician review, and no claim that the questions resemble a
+    real licensing examination.
+task_type: mcq
+dataset:
+  path: data/dataset.jsonl
+  format: jsonl
+  seed: 20260101
+  limit: 24
+  screening_size: 0
+  fields: {}
+prompt_template:
+  system: |
+    You are answering a multiple-choice question inside a research evaluation
+    harness. This is not patient care. Answer with one option letter, or write
+    ABSTAIN when the item does not contain enough information. Then give one
+    sentence of reasoning.
+  user: |
+    Question: $question
+
+    Options:
+    $options_block
+
+    Reply exactly in this shape:
+    ANSWER: <letter or ABSTAIN>
+    REASON: <one sentence>
+graders:
+  - id: accuracy
+    type: deterministic
+    metric: mcq_accuracy
+  - id: abstention
+    type: deterministic
+    metric: abstention
+  - id: format
+    type: deterministic
+    metric: format_compliance
+metrics:
+  primary: accuracy
+  secondary: [abstention, format_compliance]
+  comparison:
+    method: mcnemar
+    alpha: 0.05
+    bootstrap_resamples: 2000
+    bootstrap_seed: 20260101
+citation:
+  bibtex: |
+    @misc{template_clinical_mcq,
+      title = {Clinical multiple-choice accuracy and abstention: a synthetic Paper Pack template},
+      author = {medeval-lab contributors},
+      year = {2026},
+      note = {Synthetic pipeline template; not a published study and not clinically validated}
+    }

@@ -1,0 +1,204 @@
+{
+  "pipeline_test_only": false,
+  "status": "real",
+  "n_items": 5,
+  "n_candidates_correct": 3,
+  "n_candidates_incorrect": 2,
+  "candidate_condition_balance": {
+    "correct": 3,
+    "incorrect": 2
+  },
+  "judges": {
+    "j1_deepseek": {
+      "spec": {
+        "judge_id": "j1_deepseek",
+        "family": "deepseek",
+        "backend": "openai-compatible-api",
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "temperature": 0.3,
+        "repeats": 3,
+        "notes": "remote API judge; answer key never sent",
+        "available": true,
+        "unavailable_reason": null,
+        "pipeline_test_only": false
+      },
+      "primary_repeat": {
+        "judge_id": "j1_deepseek",
+        "repeat": 0,
+        "n_items": 5,
+        "n_scored": 5,
+        "n_parse_failures": 0,
+        "n_api_errors": 0,
+        "accuracy": {
+          "numerator": 5,
+          "denominator": 5,
+          "estimate": 1.0,
+          "ci95_wilson": [
+            0.5655175352168251,
+            1.0
+          ],
+          "method": "wilson"
+        },
+        "false_accept_rate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576197724933469
+          ],
+          "method": "wilson"
+        },
+        "false_reject_rate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0.0,
+          "ci95_wilson": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ],
+          "method": "wilson"
+        },
+        "cohen_kappa_vs_key": 1.0,
+        "cohen_kappa_vs_key_ci95": null,
+        "gwet_ac1_vs_key": 1.0,
+        "percent_agreement_vs_key": 1.0,
+        "calibration": {
+          "ece_5_bins": 0.008000000000000007,
+          "ece_5_bins_ci95": {
+            "estimate": 0.008000000000000007,
+            "low": 0.0039999999999998925,
+            "high": 0.010000000000000009,
+            "width": 0.006000000000000116,
+            "n_resamples": 1000,
+            "method": "percentile bootstrap over items",
+            "seed": 20260101,
+            "alpha": 0.05,
+            "n": 5
+          },
+          "brier": 8.000000000000014e-05,
+          "brier_ci95": {
+            "estimate": 8.000000000000014e-05,
+            "low": 4.000000000000007e-05,
+            "high": 0.00010000000000000018,
+            "width": 6.000000000000011e-05,
+            "n_resamples": 1000,
+            "method": "percentile bootstrap over items",
+            "seed": 20260101,
+            "alpha": 0.05,
+            "n": 5
+          },
+          "auroc_confidence_predicts_own_correctness": null,
+          "auroc_confidence_predicts_own_correctness_ci95": null,
+          "auroc_raw_verdict_predicts_truth": 1.0,
+          "mean_confidence": 99.2,
+          "confidence_min": 99,
+          "confidence_max": 100,
+          "confidence_histogram_5_bins": [
+            {
+              "low": 0.0,
+              "high": 20.0,
+              "count": 0
+            },
+            {
+              "low": 20.0,
+              "high": 40.0,
+              "count": 0
+            },
+            {
+              "low": 40.0,
+              "high": 60.0,
+              "count": 0
+            },
+            {
+              "low": 60.0,
+              "high": 80.0,
+              "count": 0
+            },
+            {
+              "low": 80.0,
+              "high": 100.0,
+              "count": 5
+            }
+          ]
+        },
+        "verdict_distribution": {
+          "correct": 3,
+          "incorrect": 2
+        },
+        "error_examples": []
+      },
+      "across_repeats": {
+        "judge_id": "j1_deepseek",
+        "n_items_all_repeats": 5,
+        "consistent_count": 5,
+        "consistent_fraction": 1.0,
+        "consistent_fraction_ci95_wilson": [
+          0.5655175352168251,
+          1.0
+        ],
+        "mean_pairwise_agreement_across_repeats": 1.0,
+        "n_all_correct_across_repeats": 0
+      }
+    }
+  },
+  "cross_judge": {},
+  "possible_key_errors": {
+    "rule": {
+      "two_judge": "both judges disagree with the key at confidence >= 80",
+      "single_judge_fallback": "one judge disagrees at confidence >= 90; reported for manual review only, never as a key error",
+      "applied": "single_judge_fallback"
+    },
+    "n_flagged_possible_key_errors": 0,
+    "possible_key_errors": [],
+    "n_flagged_single_judge": 0,
+    "single_judge_flags": [],
+    "flagged_item_ids": []
+  },
+  "with_and_without_flagged_items": {
+    "excluding_flagged": {},
+    "n_flagged": 0,
+    "note": "accuracy recomputed after dropping flagged items, to show how much the flag could matter"
+  },
+  "benchmark_health": {
+    "n_items": 5,
+    "ceiling_per_judge": {
+      "j1_deepseek": {
+        "n_items_with_all_repeats": 5,
+        "n_all_repeats_correct": 5,
+        "ceiling_rate": 1.0,
+        "ceiling_rate_ci95_wilson": [
+          0.5655175352168251,
+          1.0
+        ],
+        "definition": "fraction of items the judge gets right on every repeat"
+      }
+    },
+    "key_letter_distribution": {
+      "B": 2,
+      "C": 3
+    },
+    "definition_ceiling": "fraction of items answered correctly on every repeat by that judge"
+  },
+  "methods": {
+    "proportion_intervals": "Wilson score, 95%",
+    "other_intervals": "percentile bootstrap over items, 1000 resamples",
+    "consistency": "identical verdict across all 3 repeats",
+    "confidence_scale": "0-100, treated as P(own verdict is right)",
+    "n_resamples": 1000
+  },
+  "auth": {
+    "probe": "model ids recorded from responses",
+    "returned_models": {
+      "j1_deepseek": {
+        "requested_model": "deepseek-flash",
+        "returned_models": [
+          "deepseek-flash"
+        ],
+        "n_calls": 15
+      }
+    }
+  },
+  "experiment": "002_judge_families"
+}

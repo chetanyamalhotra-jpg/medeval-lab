@@ -1,0 +1,154 @@
+{
+  "run_id": "exp002-smoke",
+  "experiment": "002_judge_families",
+  "status": "completed",
+  "started_utc": "2026-11-17T10:52:13Z",
+  "config": {
+    "experiment": "002_judge_families",
+    "dataset": "medqa_4options",
+    "split": "dev",
+    "n_items": 5,
+    "seed": 20260101,
+    "repeats": 3,
+    "temperature": 0.3,
+    "primary_repeat": 0,
+    "max_api_calls": 500,
+    "allow_download": true,
+    "dry_run": false,
+    "judges": [
+      "j1_deepseek",
+      "j2_ollama"
+    ],
+    "pace_seconds": 0.0
+  },
+  "judges": [
+    {
+      "judge_id": "j1_deepseek",
+      "family": "deepseek",
+      "backend": "openai-compatible-api",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "temperature": 0.3,
+      "repeats": 3,
+      "notes": "remote API judge; answer key never sent",
+      "available": true,
+      "unavailable_reason": null,
+      "pipeline_test_only": false
+    },
+    {
+      "judge_id": "j2_ollama",
+      "family": "llama",
+      "backend": "ollama",
+      "model": "llama3.2:3b",
+      "base_url": "http://127.0.0.1:11434",
+      "temperature": 0.3,
+      "repeats": 3,
+      "notes": "",
+      "available": false,
+      "unavailable_reason": "Ollama not reachable at http://127.0.0.1:11434: URLError: <urlopen error timed out>",
+      "pipeline_test_only": false
+    }
+  ],
+  "judge_resolution": {
+    "requested": [
+      "j1_deepseek",
+      "j2_ollama"
+    ],
+    "resolved": {
+      "j1_deepseek": "api",
+      "j2_ollama": "unavailable: URLError: <urlopen error timed out>"
+    },
+    "ollama_status": {
+      "base_url": "http://127.0.0.1:11434",
+      "reachable": false,
+      "models": [],
+      "served_by": null,
+      "detail": "URLError: <urlopen error timed out>"
+    },
+    "available": [
+      "j1_deepseek"
+    ],
+    "unavailable": [
+      "j2_ollama"
+    ]
+  },
+  "dataset": {
+    "dataset": "medqa_4options",
+    "split": "dev",
+    "strategy": "direct-json",
+    "source_detail": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options-hf/resolve/main/dev.json sha256=44212909568dcdaf",
+    "n_raw_rows": 1272,
+    "n_usable_items": 1272,
+    "n_dropped": 0,
+    "drop_reasons": {},
+    "licence": {
+      "key": "medqa_4options",
+      "hf_repo": "GBaker/MedQA-USMLE-4-options-hf",
+      "licence": "cc-by-sa-4.0",
+      "licence_evidence": "https://huggingface.co/api/datasets/GBaker/MedQA-USMLE-4-options-hf -> cardData.license='cc-by-sa-4.0'",
+      "redistribute": false,
+      "attribution": "GBaker/MedQA-USMLE-4-options-hf (cc-by-sa-4.0). Item text is kept out of version control and is not redistributed by this repository.",
+      "homepage": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options-hf"
+    },
+    "notes": "hf-cache-arrow: FileNotFoundError: no cached arrow file for GBaker/MedQA-USMLE-4-options-hf split=dev"
+  },
+  "sampling": {
+    "seed": 20260101,
+    "n_requested": 5,
+    "n_selected": 5,
+    "pool_size": 1272,
+    "pool_unique_stems": 1272,
+    "discarded_duplicate_stems": 0,
+    "condition_counts": {
+      "correct": 3,
+      "incorrect": 2
+    },
+    "note": "5 distinct stems among 5 sampled items; 0 row(s) discarded as duplicate stems before drawing"
+  },
+  "plan": {
+    "per_judge": [
+      {
+        "label": "j1_deepseek",
+        "calls": 15,
+        "prompt_tokens_each": 335,
+        "max_output_tokens_each": 512,
+        "input_tokens_upper_bound": 5025,
+        "output_tokens_upper_bound": 7680
+      }
+    ],
+    "total_calls": 15,
+    "input_tokens_upper_bound": 5025,
+    "output_tokens_upper_bound": 7680,
+    "usd_upper_bound": 0.0107235,
+    "prices_verified": true,
+    "price_source": "deepseek-api-docs-peak-2026-11-17",
+    "estimator": "ceil(characters/4) per message, full max_tokens for every reply",
+    "n_items": 5,
+    "repeats": 3,
+    "judges": [
+      "j1_deepseek"
+    ],
+    "max_api_calls": 500,
+    "worst_case_with_one_retry_each": 30,
+    "within_call_cap": true,
+    "max_usd_cap": 5.0
+  },
+  "finished_utc": "2026-11-17T10:52:17Z",
+  "usage": {
+    "calls_made": 0,
+    "calls_logged": 15,
+    "cache_hits": 0,
+    "input_tokens": 5316,
+    "output_tokens": 2200,
+    "reasoning_tokens": 1969,
+    "estimated_usd": 0.0065976,
+    "price_source": "deepseek-api-docs-peak-2026-11-17",
+    "prices_verified": true,
+    "mock_run": false,
+    "spend_note": null,
+    "max_api_calls": 500,
+    "max_usd": 5.0,
+    "elapsed_seconds": 0.0
+  },
+  "n_judgements": 15
+}

@@ -1,0 +1,124 @@
+# Built-in preset. Synthetic smoke rows only; no MedCalc-Bench rows are bundled.
+schema_version: 1
+id: medcalc-bench
+version: 0.1.0
+preset: true
+title: "MedCalc-Bench-inspired clinical calculation with exact and tolerance grading"
+authors:
+  - "Nikhil Khandekar"
+  - "Qiao Jin"
+  - "Guangzhi Xiong"
+  - "Soren Dunn"
+  - "Serina Applebaum"
+  - "Zain Anwar"
+  - "Maame Sarfo-Gyamfi"
+  - "Conrad Safranek"
+  - "Abid Anwar"
+  - "Andrew Zhang"
+  - "Aidan Gilson"
+  - "Maxwell Singer"
+  - "Amisha Dave"
+  - "Andrew Taylor"
+  - "Aidong Zhang"
+  - "Qingyu Chen"
+  - "Zhiyong Lu"
+year: 2024
+venue: "NeurIPS 2024 Datasets and Benchmarks Track (Oral)"
+doi_or_url: "https://arxiv.org/abs/2406.12036"
+license: "CC0-1.0 for the synthetic smoke rows; upstream MedCalc-Bench terms apply to the source data"
+methodology_notes:
+  kind: inspired_adaptation
+  summary: >-
+    A clinical-calculation evaluation inspired by MedCalc-Bench: the target model
+    extracts structured parameters and returns one numeric result, scored by a
+    JSON-schema check, parameter field-F1, exact numeric match and a +/-5%
+    tolerance band. The four shipped items are synthetic wiring examples, not the
+    official MedCalc-Bench calculators or reference outputs.
+  limitations: >-
+    No MedCalc-Bench rows are bundled. The smoke items use invented numbers and a
+    small set of illustrative calculations; no clinical calculator library is
+    validated, and a tolerance band is a scoring convention rather than clinical
+    acceptability. Not for patient care.
+task_type: structured_extraction
+source_dataset:
+  name: "MedCalc-Bench (NCBI NLP, NeurIPS 2024)"
+  url: "https://github.com/ncbi-nlp/MedCalc-Bench"
+  huggingface: "nsk7153/MedCalc-Bench"
+  license: "See the upstream repository and dataset card; do not assume a permissive licence."
+  notes: >-
+    Reference only. The loader copies a user-supplied licensed export or an
+    explicitly accepted Hugging Face download into git-ignored .medeval_data/.
+adaptation_status: "synthetic_smoke_only; protocol-inspired, not a faithful reproduction; no upstream rows bundled"
+loader: loader.py
+dataset:
+  path: smoke.jsonl
+  format: jsonl
+  seed: 20260101
+  limit: 4
+  screening_size: 0
+  fields: {}
+prompt_template:
+  system: |
+    You are solving a synthetic clinical-calculation exercise for a research
+    benchmark. This is not patient care. Do not give treatment advice; only do the
+    requested arithmetic and return structured data.
+  user: |
+    Clinical calculation item (synthetic):
+    $input
+
+    Return one JSON object only, shaped as:
+    {"parameters": {"<name>": <number or null>, ...}, "result": <number>}
+    Put every parameter named in the item into "parameters" and the final numeric
+    answer into "result". Do not add prose outside the JSON.
+graders:
+  - id: schema
+    type: deterministic
+    metric: json_schema
+    options:
+      schema:
+        type: object
+        required: [parameters, result]
+        properties:
+          parameters:
+            type: object
+          result:
+            type: number
+  - id: parameters
+    type: deterministic
+    metric: field_f1
+    options:
+      fields: [age_years, weight_kg, height_cm, creatinine_mg_dl, sodium_meq_l, chloride_meq_l, bicarbonate_meq_l]
+  - id: result-exact
+    type: deterministic
+    metric: numeric_match_exact
+    options:
+      field: result
+      tolerance_pct: 0
+  - id: result-tolerance
+    type: deterministic
+    metric: numeric_match_tolerance
+    options:
+      field: result
+      tolerance_pct: 5
+  - id: format
+    type: deterministic
+    metric: format_compliance
+metrics:
+  primary: numeric_match_tolerance
+  secondary: [numeric_match_exact, field_f1, json_schema]
+  comparison:
+    method: paired_bootstrap
+    alpha: 0.05
+    bootstrap_resamples: 2000
+    bootstrap_seed: 20260101
+citation:
+  bibtex: |
+    @inproceedings{khandekar2024medcalcbench,
+      title = {MedCalc-Bench: Evaluating Large Language Models for Medical Calculations},
+      author = {Khandekar, Nikhil and Jin, Qiao and Xiong, Guangzhi and Dunn, Soren and Applebaum, Serina and Anwar, Zain and Sarfo-Gyamfi, Maame and Safranek, Conrad and Anwar, Abid and Zhang, Andrew and Gilson, Aidan and Singer, Maxwell and Dave, Amisha and Taylor, Andrew and Zhang, Aidong and Chen, Qingyu and Lu, Zhiyong},
+      booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024), Datasets and Benchmarks Track},
+      year = {2024},
+      eprint = {2406.12036},
+      archivePrefix = {arXiv},
+      url = {https://arxiv.org/abs/2406.12036}
+    }

@@ -1,0 +1,99 @@
+# Built-in preset. Synthetic smoke rows only; the upstream dataset is NOT bundled.
+schema_version: 1
+id: healthbench-rubric
+version: 0.1.0
+preset: true
+title: "HealthBench-inspired rubric-scored open-ended medical QA"
+authors:
+  - "Rahul K. Arora"
+  - "Jason Wei"
+  - "Rebecca Soskin Hicks"
+  - "Preston Bowman"
+  - "Joaquin Quinonero-Candela"
+  - "et al."
+year: 2025
+venue: "arXiv preprint (HealthBench, OpenAI)"
+doi_or_url: "https://arxiv.org/abs/2505.08775"
+license: "CC0-1.0 for the synthetic smoke rows; upstream HealthBench terms apply to the source data"
+methodology_notes:
+  kind: inspired_adaptation
+  summary: >-
+    Rubric-scored open-ended medical QA inspired by HealthBench: a target model
+    answers a free-text health question and a cross-family judge panel scores it
+    against item-level rubric criteria. The shipped four items are synthetic and
+    exercise the panel, disagreement and reliability path; this is not a
+    reproduction of HealthBench's item set, weighting or physician rubrics.
+  limitations: >-
+    No upstream HealthBench rows are bundled. The rubric in the smoke data is
+    invented for wiring tests, the sample is tiny, and there is no clinical
+    validation or clinician review. Judge scores are model opinions, not a
+    clinical standard.
+task_type: open_ended_rubric
+source_dataset:
+  name: "HealthBench (OpenAI, 2025)"
+  url: "https://openai.com/index/healthbench/"
+  huggingface: "Tonic/Health-Bench-Eval-OSS-2025-07"
+  license: "HealthBench terms; see the upstream page. The Hugging Face entry is a community mirror, not the official release."
+  notes: >-
+    Reference only. No HealthBench row is tracked in this repository. Use
+    loader.py --download only after reading the upstream terms, or supply a
+    licensed local export with --source.
+adaptation_status: "synthetic_smoke_only; protocol-inspired, not a faithful reproduction; no upstream rows bundled"
+loader: loader.py
+dataset:
+  path: smoke.jsonl
+  format: jsonl
+  seed: 20260101
+  limit: 4
+  screening_size: 0
+  fields: {}
+prompt_template:
+  system: |
+    You are answering an open-ended health question inside a research evaluation
+    harness. This is not patient care and you must not give patient-specific
+    advice. Be concise, state uncertainty, and avoid unsupported claims.
+  user: |
+    Question: $question
+
+    Answer in at most 120 words, then list which rubric points you addressed.
+graders:
+  - id: format
+    type: deterministic
+    metric: format_compliance
+  - id: healthbench-panel
+    type: llm_rubric
+    prompt: |
+      You are one judge on a deliberately mixed-family evaluation panel. Score the
+      candidate answer against the question, reference answer and rubric criteria.
+      Do not reward verbosity, citations you cannot verify, or confident tone.
+      Do not use outside knowledge of the model that produced the answer.
+
+      Question: $question
+      Reference answer: $reference_answer
+      Rubric criteria:
+      $rubric
+      Candidate answer: $target_answer
+
+      Return JSON only, with no prose outside it:
+      {"score": <number from $scale_min to $scale_max>, "rationale": "<one sentence>"}
+    scale_min: 1
+    scale_max: 5
+metrics:
+  primary: mean_rubric_score
+  secondary: [format_compliance]
+  comparison:
+    method: paired_bootstrap
+    alpha: 0.05
+    bootstrap_resamples: 2000
+    bootstrap_seed: 20260101
+citation:
+  bibtex: |
+    @article{arora2025healthbench,
+      title = {HealthBench: Evaluating Large Language Models Towards Improved Human Health},
+      author = {Arora, Rahul K. and Wei, Jason and Soskin Hicks, Rebecca and Bowman, Preston and Quinonero-Candela, Joaquin and others},
+      year = {2025},
+      eprint = {2505.08775},
+      archivePrefix = {arXiv},
+      primaryClass = {cs.CL},
+      url = {https://arxiv.org/abs/2505.08775}
+    }

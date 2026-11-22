@@ -1,0 +1,101 @@
+name: Benchmark quality report
+description: Report a suspected wrong answer key, ambiguous item, duplicate item or train/test leakage in a public benchmark.
+title: "[benchmark]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository does not redistribute benchmark data: each user downloads
+        the dataset under its own licence (see `DATA_LICENSES.md`). Do not paste
+        the item text, candidate text or reviewer notes here. Report identifiers
+        and evidence only. If an item id alone is not enough to check the report,
+        say so and the maintainer will arrange a private channel.
+
+        This is a research-tool issue tracker, not a source of medical advice.
+
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Dataset
+      description: The dataset key as used by the toolkit, or the closest match.
+      options:
+        - medqa_4options
+        - medmcqa
+        - pubmedqa
+        - Other public dataset (name it below)
+        - Synthetic or fixture data
+    validations:
+      required: true
+
+  - type: input
+    id: split
+    attributes:
+      label: Split
+      description: The split or subset, for example `dev`, `validation`, `test` or a named subset.
+      placeholder: "dev"
+    validations:
+      required: true
+
+  - type: input
+    id: item-id
+    attributes:
+      label: Item identifier
+      description: The item id or row identifier only. Do not paste the item text.
+      placeholder: "e.g. item_000123 or the upstream row index"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: What looks wrong?
+      options:
+        - Wrong answer key
+        - Ambiguous item or more than one defensible answer
+        - Duplicated item
+        - Train/test leakage or near-duplicate across splits
+        - Parsing or formatting problem
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What looks wrong?
+      description: Explain the issue without quoting the item. Reference the item id, option labels or numbers if needed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >
+        How did you reach this conclusion? Cite the source or reference, the
+        hash or count you observed, or the ids of duplicate/leaking pairs.
+        Do not paste benchmark item text.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Toolkit version (optional)
+      description: Output of `python -m medeval --version` or the installed package version, if relevant.
+      placeholder: "medeval-lab 0.5.0"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have not pasted benchmark item text, candidate text or reviewer notes.
+          required: true
+        - label: I understand that datasets are downloaded by each user under their own licence and are not redistributed by this repository.
+          required: true
+        - label: This report does not ask for clinical advice or make a clinical claim.
+          required: true

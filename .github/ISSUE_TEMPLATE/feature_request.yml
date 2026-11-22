@@ -1,0 +1,61 @@
+name: Feature request
+description: Propose a change or an addition to the toolkit.
+title: "[feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        medeval-lab is an independent research methods toolkit for evaluating
+        medical AI benchmarks, criteria, judges and reliability statistics. It is
+        not a medical device and it makes no clinical claims.
+
+        Describe the problem before the solution. Features that require paid API
+        calls in tests, telemetry, or committing benchmark data will not be
+        accepted.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the research or evaluation task you cannot do today, and why it matters.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What should happen? Name the affected command, page or package where you can.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches, workarounds, or relevant tools.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This fits a research methods toolkit (auditing, criteria, metrics, judge testing, reliability), not a clinical product.
+          required: true
+        - label: My proposal does not depend on clinical claims or clinical validation.
+          required: true
+        - label: My proposal does not require committing API keys, secrets or benchmark item text.
+          required: true
+        - label: I understand that features may be declined to keep the project small and reproducible.
+          required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Links to papers, datasets or prior art. Do not include secrets or benchmark item text.
+    validations:
+      required: false

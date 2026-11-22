@@ -1,0 +1,6 @@
+item_id,condition,chosen_letter,candidate_correct,j1_deepseek_verdict,j1_deepseek_confidence,flagged_for_manual_review
+dev-00606,correct,C,True,CORRECT,99,False
+dev-00458,correct,C,True,CORRECT,99,False
+dev-00648,correct,C,True,CORRECT,99,False
+dev-00733,incorrect,A,False,INCORRECT,100,False
+dev-00218,incorrect,D,False,INCORRECT,99,False

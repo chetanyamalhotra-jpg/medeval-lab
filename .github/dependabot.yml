@@ -1,0 +1,40 @@
+# Dependabot: keep the pinned Python environment and the Actions themselves current.
+#
+# The Python entry is deliberate about grouping: a reviewable batch of patch and
+# minor updates per week, so an upgrade can be tested with `pytest` and the
+# release audit before it is merged. Major bumps arrive as their own pull request.
+#
+# Dependabot pull requests must pass the same checklist as any other contribution:
+# tests added or updated, `ruff`, `scripts/oss_audit.py`, and a dry run.
+
+version: 2
+
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps"
+    groups:
+      python-minor-and-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
+    ignore:
+      # The Windows test environment is pinned on purpose (DECISIONS.md D-002);
+      # major bumps are evaluated by hand, not auto-merged.
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "ci"

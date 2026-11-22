@@ -1,0 +1,45 @@
+# medeval-lab variant of medmcqa that also reports calibration-style metrics.
+#
+# Differences from upstream lm_eval/tasks/medmcqa/medmcqa.yaml:
+#   * the rows come from a pinned local JSONL snapshot written by
+#     `python -m medeval data materialize`, so the exact items are identified by
+#     content hash in results/audit/audit_report.json instead of a mutable
+#     dataset name;
+#   * a custom process_results keeps the per-item Brier score, NLL and
+#     confidence that the harness discards after computing accuracy.
+# Prompts, choices and the 0-based `cop` target are identical to upstream, so acc
+# is directly comparable. To run against the live Hugging Face dataset instead,
+# replace dataset_path with `openlifescienceai/medmcqa` and set
+# training/validation/test splits as in the upstream YAML.
+#
+# Run from the repository root:
+#   lm-eval run --model dummy --tasks medmcqa_medeval --include_path data/tasks \
+#       --plugins medeval_metrics.plugins --limit 5 --log_samples
+task: medmcqa_medeval
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: data/cache/medmcqa_validation.jsonl
+test_split: test
+output_type: multiple_choice
+doc_to_text: !function lm_eval_utils.doc_to_text_medmcqa
+doc_to_target: cop
+doc_to_choice: ["A", "B", "C", "D"]
+process_results: !function lm_eval_utils.process_results_medmcqa
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: medeval_brier
+    aggregation: mean
+    higher_is_better: false
+  - metric: medeval_nll
+    aggregation: mean
+    higher_is_better: false
+  - metric: medeval_mean_confidence
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.1
+  medeval_lab: "0.1.0"
+  note: "Reference-label metrics only; no clinical claim."

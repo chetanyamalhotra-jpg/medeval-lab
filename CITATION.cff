@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this toolkit, please cite it as below. Please also cite the criteria/metrics versions you used (see CHANGELOG.md)."
+title: "medeval-lab: an independent, open-source Medical AI Evaluation Lab"
+abstract: >-
+  A research methods toolkit for auditing medical benchmark item integrity,
+  defining literature-traced evaluation criteria and metrics, testing LLM judges
+  as measurement instruments, and reporting reliability statistics honestly.
+  medeval-lab is a research tool, not a medical device: it has no clinical
+  validation and no clinician reference standard. Small-sample results are
+  exploratory.
+version: 0.6.0
+date-released: "2026-11-22"
+license: MIT
+type: software
+authors:
+  - name: "Chetanya Malhotra"
+    email: "301152462+chetanyamalhotra-jpg@users.noreply.github.com"
+keywords:
+  - medical AI evaluation
+  - LLM-as-a-judge
+  - benchmark auditing
+  - inter-rater reliability
+  - reproducibility
+repository-code: "https://github.com/chetanyamalhotra-jpg/medeval-lab"
+url: "https://github.com/chetanyamalhotra-jpg/medeval-lab"

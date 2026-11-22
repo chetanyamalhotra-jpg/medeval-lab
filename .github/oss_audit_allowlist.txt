@@ -1,0 +1,30 @@
+# Documented exceptions for scripts/oss_audit.py.
+#
+# Format:  path-glob | rule | reason
+#
+# Every line is a visible decision that a release check has read. The audit prints
+# how many findings it suppressed, so this file can never hide a finding silently.
+# An entry must never be added to make a *new* problem go away: fix the new
+# problem instead, or explain here why the content cannot change.
+#
+# Rule names the audit can emit: openai-style-key, prefixed-key, openrouter-key,
+# bearer-token, slack-token, google-api-key, github-token, huggingface-token,
+# aws-access-key, private-key-block, quoted-credential, personal-path,
+# email-address, deny-list, tracked-env-file, tracked-run-artefact,
+# large-tracked-file. Use "*" to allow any rule for a path.
+
+# The v0.1 audit and harness-baseline records are historical evidence. They are
+# kept byte-identical (DECISIONS.md, "results are immutable"), and they contain
+# the build machine's absolute path. They are listed in OSS_AUDIT.md. Only the
+# personal-path and deny-list rules are excused: a key-like string in these files
+# would still fail the audit.
+results/audit/*|personal-path|v0.1 audit records kept byte-identical; already public in previous releases
+results/audit/*|deny-list|v0.1 audit records kept byte-identical; already public in previous releases
+results/harness_runs/*|personal-path|v0.1 harness baseline record kept byte-identical
+results/harness_runs/*|deny-list|v0.1 harness baseline record kept byte-identical
+
+# scripts/scan_secrets.py quotes four historical fake keys verbatim in its
+# KNOWN_FIXTURE_STRINGS tuple. They are fake test values (no credential), and the
+# comment on each line says so.
+scripts/scan_secrets.py|openai-style-key|KNOWN_FIXTURE_STRINGS: documented fake test keys, never credentials
+scripts/scan_secrets.py|prefixed-key|KNOWN_FIXTURE_STRINGS: documented fake test keys, never credentials

@@ -1,0 +1,223 @@
+{
+  "run_id": "exp002-main",
+  "experiment": "002_judge_families",
+  "started_utc": "2026-11-17T11:06:52Z",
+  "package_version": "0.2.0",
+  "git": {
+    "commit": "6a9b09b8c943dab223157d1699f4c5c31a52c129",
+    "short_commit": "6a9b09b",
+    "branch": "main",
+    "dirty": true,
+    "dirty_file_count": 63,
+    "dirty_files_sample": [
+      "M .env.example",
+      " M .github/workflows/ci.yml",
+      " M DECISIONS.md",
+      " M docs/architecture.md",
+      " M experiments/001_judge_reliability/run.py",
+      " M experiments/002_judge_families/PLAN.md",
+      " M packages/medeval/cli.py",
+      " M packages/medeval/harness.py",
+      " M packages/medeval_audit/answer_key.py",
+      " M packages/medeval_audit/contamination.py",
+      " M packages/medeval_audit/duplicates.py",
+      " M packages/medeval_audit/loaders.py",
+      " M packages/medeval_audit/pipeline.py",
+      " M packages/medeval_audit/report.py",
+      " M packages/medeval_core/backends.py",
+      " M packages/medeval_core/calllog.py",
+      " M packages/medeval_core/client.py",
+      " M packages/medeval_core/cost.py",
+      " M packages/medeval_core/manifest.py",
+      " M packages/medeval_core/net.py"
+    ]
+  },
+  "environment": {
+    "python": "3.14.6",
+    "python_implementation": "CPython",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD"
+  },
+  "packages": {
+    "medeval-lab": "0.1.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "requests": "2.34.2",
+    "python-dotenv": "1.2.4",
+    "fastapi": "0.163.1",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "pytest": "9.2.0",
+    "medeval-package": "0.2.0"
+  },
+  "models": {
+    "j1_deepseek": "deepseek-flash",
+    "j2_ollama": "llama3.2:3b"
+  },
+  "seeds": {
+    "sampling": 20260101,
+    "judge_base": 20260101,
+    "primary_repeat": 0
+  },
+  "prompt_hashes": {
+    "prompt_version": "mcq_judge_v1",
+    "system_prompt_sha256": "f9afc0584bfa72d150eaee4a5588039c9e59be87a18a83eb4b9a254088387119",
+    "user_template_sha256": "b9df527d3220100d7156d6500629ed92d8010e606ea4737220102fb9444e1408",
+    "prompt_config_sha256": "2c8d1036c8bb183bfb992baf54c54398a7ca00e1a938e337cda92e02243748f5"
+  },
+  "dataset": {
+    "dataset": "medqa_4options",
+    "split": "dev",
+    "strategy": "direct-json",
+    "source_detail": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options-hf/resolve/main/dev.json sha256=44212909568dcdaf",
+    "n_raw_rows": 1272,
+    "n_usable_items": 1272,
+    "n_dropped": 0,
+    "drop_reasons": {},
+    "licence": {
+      "key": "medqa_4options",
+      "hf_repo": "GBaker/MedQA-USMLE-4-options-hf",
+      "licence": "cc-by-sa-4.0",
+      "licence_evidence": "https://huggingface.co/api/datasets/GBaker/MedQA-USMLE-4-options-hf -> cardData.license='cc-by-sa-4.0'",
+      "redistribute": false,
+      "attribution": "GBaker/MedQA-USMLE-4-options-hf (cc-by-sa-4.0). Item text is kept out of version control and is not redistributed by this repository.",
+      "homepage": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options-hf"
+    },
+    "notes": "hf-cache-arrow: FileNotFoundError: no cached arrow file for GBaker/MedQA-USMLE-4-options-hf split=dev"
+  },
+  "configuration": {
+    "experiment": "002_judge_families",
+    "dataset": "medqa_4options",
+    "split": "dev",
+    "n_items": 60,
+    "seed": 20260101,
+    "repeats": 3,
+    "temperature": 0.3,
+    "primary_repeat": 0,
+    "max_api_calls": 500,
+    "allow_download": true,
+    "dry_run": false,
+    "judges": [
+      "j1_deepseek",
+      "j2_ollama"
+    ],
+    "pace_seconds": 0.0,
+    "response_templates": {
+      "n_templates": 6,
+      "template_ids": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ],
+      "rationale_is_template_filler": true
+    }
+  },
+  "extra": {
+    "judges": [
+      {
+        "judge_id": "j1_deepseek",
+        "family": "deepseek",
+        "backend": "openai-compatible-api",
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "temperature": 0.3,
+        "repeats": 3,
+        "notes": "remote API judge; answer key never sent",
+        "available": true,
+        "unavailable_reason": null,
+        "pipeline_test_only": false
+      },
+      {
+        "judge_id": "j2_ollama",
+        "family": "llama",
+        "backend": "ollama",
+        "model": "llama3.2:3b",
+        "base_url": "http://127.0.0.1:11434",
+        "temperature": 0.3,
+        "repeats": 3,
+        "notes": "",
+        "available": false,
+        "unavailable_reason": "Ollama not reachable at http://127.0.0.1:11434: URLError: <urlopen error timed out>",
+        "pipeline_test_only": false
+      }
+    ],
+    "judge_resolution": {
+      "requested": [
+        "j1_deepseek",
+        "j2_ollama"
+      ],
+      "resolved": {
+        "j1_deepseek": "api",
+        "j2_ollama": "unavailable: URLError: <urlopen error timed out>"
+      },
+      "ollama_status": {
+        "base_url": "http://127.0.0.1:11434",
+        "reachable": false,
+        "models": [],
+        "served_by": null,
+        "detail": "URLError: <urlopen error timed out>"
+      },
+      "available": [
+        "j1_deepseek"
+      ],
+      "unavailable": [
+        "j2_ollama"
+      ]
+    },
+    "usage": {
+      "calls_made": 187,
+      "calls_logged": 187,
+      "cache_hits": 0,
+      "input_tokens": 67727,
+      "output_tokens": 63682,
+      "reasoning_tokens": 60940,
+      "estimated_usd": 0.1698645,
+      "price_source": "deepseek-api-docs-peak-2026-11-17",
+      "prices_verified": true,
+      "mock_run": false,
+      "spend_note": null,
+      "max_api_calls": 500,
+      "max_usd": 5.0,
+      "elapsed_seconds": 692.08
+    },
+    "sampling": {
+      "seed": 20260101,
+      "n_requested": 60,
+      "n_selected": 60,
+      "pool_size": 1272,
+      "pool_unique_stems": 1272,
+      "discarded_duplicate_stems": 0,
+      "condition_counts": {
+        "correct": 30,
+        "incorrect": 30
+      },
+      "note": "60 distinct stems among 60 sampled items; 0 row(s) discarded as duplicate stems before drawing"
+    },
+    "status": "completed"
+  },
+  "status": "completed",
+  "usage": {
+    "calls_made": 187,
+    "calls_logged": 187,
+    "cache_hits": 0,
+    "input_tokens": 67727,
+    "output_tokens": 63682,
+    "reasoning_tokens": 60940,
+    "estimated_usd": 0.1698645,
+    "price_source": "deepseek-api-docs-peak-2026-11-17",
+    "prices_verified": true,
+    "mock_run": false,
+    "spend_note": null,
+    "max_api_calls": 500,
+    "max_usd": 5.0,
+    "elapsed_seconds": 692.08
+  }
+}

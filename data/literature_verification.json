@@ -1,0 +1,407 @@
+{
+  "n_rows": 40,
+  "n_verified": 39,
+  "n_unverified": 1,
+  "rows": [
+    {
+      "id": "lit_medqa",
+      "doi": "10.48550/arXiv.2009.13081",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_medmcqa",
+      "doi": "10.48550/arXiv.2203.14371",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "MedMCQA : A Large-scale Multi-Subject Multi-Choice Dataset for Medical domain Question Answering",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_pubmedqa",
+      "doi": "10.18653/v1/D19-1259",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "PubMedQA: A Dataset for Biomedical Research Question Answering",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_healthbench",
+      "doi": "10.48550/arXiv.2505.08775",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "HealthBench: Evaluating Large Language Models Towards Improved Human Health",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_medhelm",
+      "doi": "10.48550/arXiv.2505.23802",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "MedHELM: Holistic Evaluation of Large Language Models for Medical Tasks",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_medhalt",
+      "doi": "10.48550/arXiv.2307.15343",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Med-HALT: Medical Domain Hallucination Test for Large Language Models",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_medhallu",
+      "doi": "",
+      "status": "no_doi",
+      "registry": "none",
+      "registered_title": "",
+      "title_similarity": 0.0,
+      "http_status": 0,
+      "detail": "no DOI in registry"
+    },
+    {
+      "id": "lit_llm_judge_bias",
+      "doi": "10.48550/arXiv.2306.05685",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_rubric_grading",
+      "doi": "10.18653/v1/2023.emnlp-main.153",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "G-Eval: NLG Evaluation using Gpt-4 with Better Human Alignment",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_benchmark_quality",
+      "doi": "10.48550/arXiv.2107.07002",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "The Benchmark Lottery",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_contamination",
+      "doi": "10.48550/arXiv.2311.09783",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Investigating Data Contamination in Modern Benchmarks for Large Language Models",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_error_bars",
+      "doi": "10.48550/arXiv.2411.00640",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_self_consistency",
+      "doi": "10.48550/arXiv.2203.11171",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_cohen_kappa",
+      "doi": "10.1177/001316446002000104",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "A Coefficient of Agreement for Nominal Scales",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_fleiss_kappa",
+      "doi": "10.1037/h0031619",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "Measuring nominal scale agreement among many raters.",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_krippendorff",
+      "doi": "10.1080/19312450709336664",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "Answering the Call for a Standard Reliability Measure for Coding Data",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_icc",
+      "doi": "10.1037/0033-2909.86.2.420",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "Intraclass correlations: Uses in assessing rater reliability.",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_landis_koch",
+      "doi": "10.2307/2529310",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "The Measurement of Observer Agreement for Categorical Data",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_brier",
+      "doi": "10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "VERIFICATION OF FORECASTS EXPRESSED IN TERMS OF PROBABILITY",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_ece",
+      "doi": "10.48550/arXiv.1706.04599",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "On Calibration of Modern Neural Networks",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_mcnemar",
+      "doi": "10.1007/BF02295996",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against crossref record"
+    },
+    {
+      "id": "lit_benchmark_plateau",
+      "doi": "10.48550/arXiv.2602.16763",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_judge_correlation",
+      "doi": "10.48550/arXiv.2605.29800",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Nine Judges, Two Effective Votes: Correlated Errors Undermine LLM Evaluation Panels",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_jev_judge",
+      "doi": "10.48550/arXiv.2609.26550",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "JEV-as-a-Judge: Accept When Confident, Escalate When Unsure",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_skillsbench",
+      "doi": "10.48550/arXiv.2602.12670",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_agent_judge_survey",
+      "doi": "10.48550/arXiv.2601.05111",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Agent-as-a-Judge",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_claw_eval",
+      "doi": "10.48550/arXiv.2604.06132",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Claw-Eval: Towards Trustworthy Evaluation of Autonomous Agents",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_cua_verifiers",
+      "doi": "10.48550/arXiv.2604.06240",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "The Art of Building Verifiers for Computer Use Agents",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_terminal_bench",
+      "doi": "10.48550/arXiv.2601.11868",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_posttrainbench",
+      "doi": "10.48550/arXiv.2603.08640",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_lifeval",
+      "doi": "10.48550/arXiv.2611.06687",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "LifeVal: Evaluating AI Model Performance on Personalized Agentic Consumer Tasks",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_same_verdict",
+      "doi": "10.48550/arXiv.2604.16383",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Same Verdict, Different Reasons: LLM-as-a-Judge and Clinician Disagreement on Medical Chatbot Completeness",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_missing_info_judges",
+      "doi": "10.48550/arXiv.2607.18828",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Evaluating medical AI under missing information: same-provider judges and human raters change apparent safety",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_rater_validity",
+      "doi": "10.48550/arXiv.2607.01103",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Evaluating Large Language Model Raters for German Open-Response Clinical Questions: A Physician-Annotated Benchmark Study of Agreement, Evaluator Bias, and Abstention",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_jury_vs_clinician",
+      "doi": "10.48550/arXiv.2604.14892",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Can LLMs Accurately Score Medical Diagnoses and Clinical Reasoning?",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_gemini_medicine",
+      "doi": "10.48550/arXiv.2404.18416",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Capabilities of Gemini Models in Medicine",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_medmarks",
+      "doi": "10.48550/arXiv.2605.01417",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Medmarks: A Comprehensive Open-Source LLM Benchmark Suite for Medical Tasks",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_evalstats",
+      "doi": "10.48550/arXiv.2609.35815",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "How to Run Statistics over LLM Judges and Trust the Results: Calibrated Inference for Small-Sample AI Evaluation with evalstats",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_clt_interval",
+      "doi": "10.48550/arXiv.2503.01747",
+      "status": "verified",
+      "registry": "datacite",
+      "registered_title": "Position: Don't Use the CLT in LLM Evals With Fewer Than a Few Hundred Datapoints",
+      "title_similarity": 1.0,
+      "http_status": 200,
+      "detail": "title overlap 1.00 against datacite record"
+    },
+    {
+      "id": "lit_jmir_medqa_integrity",
+      "doi": "10.2196/90061",
+      "status": "verified",
+      "registry": "crossref",
+      "registered_title": "Benchmark Integrity and Reasoning-Trace Errors in Medical Question Answering With Large Language Models: Mixed Methods Study With Sparse Autoencoders (Preprint)",
+      "title_similarity": 0.929,
+      "http_status": 200,
+      "detail": "title overlap 0.93 against crossref record"
+    }
+  ]
+}

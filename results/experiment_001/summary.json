@@ -1,0 +1,547 @@
+{
+  "experiment": "001_judge_reliability",
+  "run_id": "exp001-20261115T150359Z-7a3c93f1",
+  "backend": {
+    "backend": "mock",
+    "model": "mock-judge-v1",
+    "base_url": null,
+    "reason": "no API credentials, no local model server, and no usable local HF model (torch not importable)",
+    "probe_detail": null,
+    "requested_override": "auto",
+    "pipeline_test_only": true,
+    "label": "MOCK judge (PIPELINE TEST ONLY)"
+  },
+  "settings": {
+    "base_url": null,
+    "model": null,
+    "api_key_present": false,
+    "backend_override": "auto",
+    "hf_model": null,
+    "timeout_s": 60.0,
+    "max_tokens": 512,
+    "temperature": 0.0,
+    "seed": 20260101,
+    "retries": 2,
+    "env_files_loaded": []
+  },
+  "seeds": [
+    20260101,
+    20260102,
+    20260103
+  ],
+  "primary_seed": 20260101,
+  "n_cases": 50,
+  "judges": {
+    "rule_based": "deterministic",
+    "llm_free_mock": "mock",
+    "llm_guided_mock": "mock",
+    "jury_mock": "ensemble",
+    "llm_biased_mock": "mock"
+  },
+  "summary": {
+    "judges": {
+      "rule_based": {
+        "n": 50,
+        "n_scored": 50,
+        "accuracy": 0.96,
+        "ci": {
+          "estimate": 0.96,
+          "low": 0.8150449590085651,
+          "high": 0.98,
+          "width": 0.16495504099143488,
+          "n_resamples": 10000,
+          "method": "bca",
+          "seed": 20260101,
+          "alpha": 0.05,
+          "n": 50
+        },
+        "n_errors": 0,
+        "per_error_type": {
+          "contraindicated_drug": {
+            "n": 10.0,
+            "correct": 8.0,
+            "accuracy": 0.8
+          },
+          "wrong_dose": {
+            "n": 10.0,
+            "correct": 10.0,
+            "accuracy": 1.0
+          },
+          "unsafe_recommendation": {
+            "n": 8.0,
+            "correct": 8.0,
+            "accuracy": 1.0
+          },
+          "critical_omission": {
+            "n": 7.0,
+            "correct": 7.0,
+            "accuracy": 1.0
+          },
+          "wrong_diagnosis": {
+            "n": 15.0,
+            "correct": 15.0,
+            "accuracy": 1.0
+          }
+        },
+        "backend": "deterministic",
+        "model": "rules-v0.1",
+        "pipeline_test_only": false
+      },
+      "llm_free_mock": {
+        "n": 50,
+        "n_scored": 50,
+        "accuracy": 0.8,
+        "ci": {
+          "estimate": 0.8,
+          "low": 0.64,
+          "high": 0.88,
+          "width": 0.24,
+          "n_resamples": 10000,
+          "method": "bca",
+          "seed": 20260101,
+          "alpha": 0.05,
+          "n": 50
+        },
+        "n_errors": 0,
+        "per_error_type": {
+          "contraindicated_drug": {
+            "n": 10.0,
+            "correct": 8.0,
+            "accuracy": 0.8
+          },
+          "wrong_dose": {
+            "n": 10.0,
+            "correct": 9.0,
+            "accuracy": 0.9
+          },
+          "unsafe_recommendation": {
+            "n": 8.0,
+            "correct": 7.0,
+            "accuracy": 0.875
+          },
+          "critical_omission": {
+            "n": 7.0,
+            "correct": 5.0,
+            "accuracy": 0.7142857142857143
+          },
+          "wrong_diagnosis": {
+            "n": 15.0,
+            "correct": 11.0,
+            "accuracy": 0.7333333333333333
+          }
+        },
+        "backend": "mock",
+        "model": "mock-llm_free_mock",
+        "pipeline_test_only": true
+      },
+      "llm_guided_mock": {
+        "n": 50,
+        "n_scored": 50,
+        "accuracy": 0.76,
+        "ci": {
+          "estimate": 0.76,
+          "low": 0.6,
+          "high": 0.84,
+          "width": 0.24,
+          "n_resamples": 10000,
+          "method": "bca",
+          "seed": 20260101,
+          "alpha": 0.05,
+          "n": 50
+        },
+        "n_errors": 0,
+        "per_error_type": {
+          "contraindicated_drug": {
+            "n": 10.0,
+            "correct": 9.0,
+            "accuracy": 0.9
+          },
+          "wrong_dose": {
+            "n": 10.0,
+            "correct": 7.0,
+            "accuracy": 0.7
+          },
+          "unsafe_recommendation": {
+            "n": 8.0,
+            "correct": 7.0,
+            "accuracy": 0.875
+          },
+          "critical_omission": {
+            "n": 7.0,
+            "correct": 5.0,
+            "accuracy": 0.7142857142857143
+          },
+          "wrong_diagnosis": {
+            "n": 15.0,
+            "correct": 10.0,
+            "accuracy": 0.6666666666666666
+          }
+        },
+        "backend": "mock",
+        "model": "mock-llm_guided_mock",
+        "pipeline_test_only": true
+      },
+      "jury_mock": {
+        "n": 50,
+        "n_scored": 50,
+        "accuracy": 0.62,
+        "ci": {
+          "estimate": 0.62,
+          "low": 0.46,
+          "high": 0.72,
+          "width": 0.25999999999999995,
+          "n_resamples": 10000,
+          "method": "bca",
+          "seed": 20260101,
+          "alpha": 0.05,
+          "n": 50
+        },
+        "n_errors": 0,
+        "per_error_type": {
+          "contraindicated_drug": {
+            "n": 10.0,
+            "correct": 7.0,
+            "accuracy": 0.7
+          },
+          "wrong_dose": {
+            "n": 10.0,
+            "correct": 6.0,
+            "accuracy": 0.6
+          },
+          "unsafe_recommendation": {
+            "n": 8.0,
+            "correct": 6.0,
+            "accuracy": 0.75
+          },
+          "critical_omission": {
+            "n": 7.0,
+            "correct": 4.0,
+            "accuracy": 0.5714285714285714
+          },
+          "wrong_diagnosis": {
+            "n": 15.0,
+            "correct": 8.0,
+            "accuracy": 0.5333333333333333
+          }
+        },
+        "backend": "ensemble",
+        "model": "llm_free_mock+llm_guided_mock",
+        "pipeline_test_only": true
+      },
+      "llm_biased_mock": {
+        "n": 50,
+        "n_scored": 50,
+        "accuracy": 0.58,
+        "ci": {
+          "estimate": 0.58,
+          "low": 0.42,
+          "high": 0.7,
+          "width": 0.27999999999999997,
+          "n_resamples": 10000,
+          "method": "bca",
+          "seed": 20260101,
+          "alpha": 0.05,
+          "n": 50
+        },
+        "n_errors": 0,
+        "per_error_type": {
+          "contraindicated_drug": {
+            "n": 10.0,
+            "correct": 8.0,
+            "accuracy": 0.8
+          },
+          "wrong_dose": {
+            "n": 10.0,
+            "correct": 7.0,
+            "accuracy": 0.7
+          },
+          "unsafe_recommendation": {
+            "n": 8.0,
+            "correct": 3.0,
+            "accuracy": 0.375
+          },
+          "critical_omission": {
+            "n": 7.0,
+            "correct": 2.0,
+            "accuracy": 0.2857142857142857
+          },
+          "wrong_diagnosis": {
+            "n": 15.0,
+            "correct": 9.0,
+            "accuracy": 0.6
+          }
+        },
+        "backend": "mock",
+        "model": "mock-llm_biased_mock",
+        "pipeline_test_only": true
+      }
+    },
+    "agreement": {
+      "llm_free_mock|rule_based": {
+        "n": 50,
+        "percent_agreement": 0.76,
+        "cohen_kappa": -0.0714285714285715,
+        "gwet_ac1": 0.6957403651115619
+      },
+      "llm_free_mock|llm_guided_mock": {
+        "n": 50,
+        "percent_agreement": 0.68,
+        "cohen_kappa": 0.06976744186046488,
+        "gwet_ac1": 0.5127892813641901
+      },
+      "llm_guided_mock|rule_based": {
+        "n": 50,
+        "percent_agreement": 0.76,
+        "cohen_kappa": 0.07975460122699361,
+        "gwet_ac1": 0.6838777660695469
+      },
+      "jury_mock|rule_based": {
+        "n": 50,
+        "percent_agreement": 0.6,
+        "cohen_kappa": 0.005964214711729792,
+        "gwet_ac1": 0.515797118992858
+      },
+      "jury_mock|llm_free_mock": {
+        "n": 50,
+        "percent_agreement": 0.68,
+        "cohen_kappa": 0.3495934959349594,
+        "gwet_ac1": 0.5861890598732704
+      },
+      "jury_mock|llm_guided_mock": {
+        "n": 50,
+        "percent_agreement": 0.68,
+        "cohen_kappa": 0.3779160186625195,
+        "gwet_ac1": 0.5801075974281591
+      },
+      "jury_mock|llm_biased_mock": {
+        "n": 50,
+        "percent_agreement": 0.38,
+        "cohen_kappa": -0.0078023407022106165,
+        "gwet_ac1": 0.14079822616407986
+      },
+      "llm_biased_mock|rule_based": {
+        "n": 50,
+        "percent_agreement": 0.54,
+        "cohen_kappa": -0.07879924953095677,
+        "gwet_ac1": 0.2877051718798391
+      },
+      "llm_biased_mock|llm_free_mock": {
+        "n": 50,
+        "percent_agreement": 0.54,
+        "cohen_kappa": -0.017699115044247555,
+        "gwet_ac1": 0.19608528486543178
+      },
+      "llm_biased_mock|llm_guided_mock": {
+        "n": 50,
+        "percent_agreement": 0.54,
+        "cohen_kappa": -0.003490401396160416,
+        "gwet_ac1": 0.17533166009322346
+      }
+    },
+    "position": {
+      "rule_based": {
+        "n_pairs": 100,
+        "first_slot_rate": 0.5,
+        "exact_binomial_p": 1.0,
+        "swap_consistency": 1.0,
+        "n_swap_pairs": 50,
+        "notes": "first_slot_rate=0.5 means no measurable position preference"
+      },
+      "llm_free_mock": {
+        "n_pairs": 100,
+        "first_slot_rate": 0.5,
+        "exact_binomial_p": 1.0,
+        "swap_consistency": 1.0,
+        "n_swap_pairs": 50,
+        "notes": "first_slot_rate=0.5 means no measurable position preference"
+      },
+      "llm_guided_mock": {
+        "n_pairs": 100,
+        "first_slot_rate": 0.5,
+        "exact_binomial_p": 1.0,
+        "swap_consistency": 1.0,
+        "n_swap_pairs": 50,
+        "notes": "first_slot_rate=0.5 means no measurable position preference"
+      },
+      "jury_mock": {
+        "n_pairs": 68,
+        "first_slot_rate": 0.5,
+        "exact_binomial_p": 1.0,
+        "swap_consistency": 1.0,
+        "n_swap_pairs": 34,
+        "notes": "first_slot_rate=0.5 means no measurable position preference"
+      },
+      "llm_biased_mock": {
+        "n_pairs": 100,
+        "first_slot_rate": 0.89,
+        "exact_binomial_p": 2.540853335492305e-16,
+        "swap_consistency": 0.22,
+        "n_swap_pairs": 50,
+        "notes": "first_slot_rate=0.5 means no measurable position preference"
+      }
+    },
+    "length": {
+      "rule_based": {
+        "estimate": 3.94,
+        "low": -4.136223308124186,
+        "high": 11.96,
+        "width": 16.096223308124188,
+        "n_resamples": 2000,
+        "method": "bca",
+        "seed": 20260101,
+        "alpha": 0.05,
+        "n": 50
+      },
+      "llm_free_mock": {
+        "estimate": -0.34,
+        "low": -9.11268638162201,
+        "high": 7.21804982963165,
+        "width": 16.33073621125366,
+        "n_resamples": 2000,
+        "method": "bca",
+        "seed": 20260101,
+        "alpha": 0.05,
+        "n": 50
+      },
+      "llm_guided_mock": {
+        "estimate": 5.74,
+        "low": -2.578624915237075,
+        "high": 12.8447104955663,
+        "width": 15.423335410803375,
+        "n_resamples": 2000,
+        "method": "bca",
+        "seed": 20260101,
+        "alpha": 0.05,
+        "n": 50
+      },
+      "jury_mock": {
+        "estimate": 3.9705882352941178,
+        "low": -6.4788401332551615,
+        "high": 13.852137395327384,
+        "width": 20.330977528582544,
+        "n_resamples": 2000,
+        "method": "bca",
+        "seed": 20260101,
+        "alpha": 0.05,
+        "n": 34
+      },
+      "llm_biased_mock": {
+        "estimate": 0.22,
+        "low": -8.3,
+        "high": 7.765727376597161,
+        "width": 16.06572737659716,
+        "n_resamples": 2000,
+        "method": "bca",
+        "seed": 20260101,
+        "alpha": 0.05,
+        "n": 50
+      }
+    }
+  },
+  "self_consistency": {
+    "rule_based": {
+      "n_cases": 50.0,
+      "n_repeats": 3.0,
+      "exact_agreement": 1.0,
+      "unanimous_rate": 1.0,
+      "alpha": 1.0
+    },
+    "llm_free_mock": {
+      "n_cases": 50.0,
+      "n_repeats": 3.0,
+      "exact_agreement": 0.7999999999999998,
+      "unanimous_rate": 0.4,
+      "alpha": -0.05028195488721798
+    },
+    "llm_guided_mock": {
+      "n_cases": 50.0,
+      "n_repeats": 3.0,
+      "exact_agreement": 0.8199999999999998,
+      "unanimous_rate": 0.46,
+      "alpha": 0.019736842105263275
+    },
+    "jury_mock": {
+      "n_cases": 50.0,
+      "n_repeats": 3.0,
+      "exact_agreement": 0.6933333333333331,
+      "unanimous_rate": 0.18,
+      "alpha": -0.07238583719391123
+    },
+    "llm_biased_mock": {
+      "n_cases": 50.0,
+      "n_repeats": 3.0,
+      "exact_agreement": 0.9,
+      "unanimous_rate": 0.7,
+      "alpha": 0.6008928571428571
+    }
+  },
+  "paired": {
+    "rule_based|llm_free_mock": {
+      "b01": 2.0,
+      "b10": 10.0,
+      "p_value": 0.03857421875,
+      "method": "exact binomial"
+    },
+    "rule_based|llm_guided_mock": {
+      "b01": 1.0,
+      "b10": 11.0,
+      "p_value": 0.00634765625,
+      "method": "exact binomial"
+    },
+    "rule_based|jury_mock": {
+      "b01": 1.0,
+      "b10": 18.0,
+      "p_value": 7.62939453125e-05,
+      "method": "exact binomial"
+    },
+    "rule_based|llm_biased_mock": {
+      "b01": 2.0,
+      "b10": 21.0,
+      "p_value": 6.604194641113281e-05,
+      "method": "exact binomial"
+    },
+    "llm_free_mock|llm_guided_mock": {
+      "b01": 7.0,
+      "b10": 9.0,
+      "p_value": 0.803619384765625,
+      "method": "exact binomial"
+    },
+    "llm_free_mock|jury_mock": {
+      "b01": 0.0,
+      "b10": 9.0,
+      "p_value": 0.00390625,
+      "method": "exact binomial"
+    },
+    "llm_free_mock|llm_biased_mock": {
+      "b01": 6.0,
+      "b10": 17.0,
+      "p_value": 0.03468966484069824,
+      "method": "exact binomial"
+    },
+    "llm_guided_mock|jury_mock": {
+      "b01": 0.0,
+      "b10": 7.0,
+      "p_value": 0.015625,
+      "method": "exact binomial"
+    },
+    "llm_guided_mock|llm_biased_mock": {
+      "b01": 7.0,
+      "b10": 16.0,
+      "p_value": 0.0931396484375,
+      "method": "exact binomial"
+    },
+    "jury_mock|llm_biased_mock": {
+      "b01": 11.0,
+      "b10": 13.0,
+      "p_value": 0.8388197422027588,
+      "method": "exact binomial"
+    }
+  },
+  "figures": [
+    "results\\experiment_001\\figures\\accuracy_with_ci.png",
+    "results\\experiment_001\\figures\\agreement_matrix.png",
+    "results\\experiment_001\\figures\\self_consistency.png",
+    "results\\experiment_001\\figures\\position_bias.png"
+  ],
+  "pipeline_test_only": true
+}

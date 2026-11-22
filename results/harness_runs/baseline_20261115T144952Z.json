@@ -1,0 +1,45 @@
+{
+  "timestamp_utc": "20261115T144952Z",
+  "model": "dummy",
+  "model_args": {},
+  "tasks": [
+    "medmcqa_medeval",
+    "medqa_4options_medeval"
+  ],
+  "limit": 20,
+  "include_path": "C:\\Users\\chait\\OneDrive\\Documents\\deepseek-harness\\default-workspace\\medeval-lab\\data\\tasks",
+  "harness_version": "0.4.14.dev0",
+  "results": {
+    "medmcqa_medeval": {
+      "name": "medmcqa_medeval",
+      "alias": "medmcqa_medeval",
+      "sample_len": 20,
+      "acc,none": 0.4,
+      "acc_stderr,none": 0.11239029738980327,
+      "medeval_brier,none": 0.20283578262071922,
+      "medeval_brier_stderr,none": 0.04222079901271953,
+      "medeval_nll,none": 1.3164057908770452,
+      "medeval_nll_stderr,none": 0.05583870282242638,
+      "medeval_mean_confidence,none": 0.32885947670931975,
+      "medeval_mean_confidence_stderr,none": 0.007531603497251724
+    },
+    "medqa_4options_medeval": {
+      "name": "medqa_4options_medeval",
+      "alias": "medqa_4options_medeval",
+      "sample_len": 20,
+      "acc,none": 0.3,
+      "acc_stderr,none": 0.10513149660756935,
+      "medeval_brier,none": 0.18389960721316526,
+      "medeval_brier_stderr,none": 0.04434499597427753,
+      "medeval_nll,none": 1.361249608060998,
+      "medeval_nll_stderr,none": 0.0387825303706419,
+      "medeval_mean_confidence,none": 0.31972230781003386,
+      "medeval_mean_confidence_stderr,none": 0.007522996647228922
+    }
+  },
+  "n_samples": {
+    "medmcqa_medeval": 20,
+    "medqa_4options_medeval": 20
+  },
+  "note": "dummy model: deterministic pseudo-logits. These numbers test the evaluation wiring, not model performance."
+}

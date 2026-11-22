@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "seed-0001",
+    "text": "A 68-year-old man presents with 90 minutes of crushing central chest pain, sweating, and nausea. Blood pressure is 82/54 mmHg, pulse is 48/min, and the lungs are clear. ECG shows ST elevation in leads II, III, and aVF. Which single next step is most appropriate?",
+    "options": [
+      "Emergent reperfusion with percutaneous coronary intervention",
+      "Sublingual nitroglycerin for chest pain",
+      "Observation with serial troponins",
+      "Oral beta blockade for rate control"
+    ],
+    "gold_answer": "Emergent reperfusion with percutaneous coronary intervention",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Hypotension in inferior STEMI should prompt urgent reperfusion and caution with nitrates."
+  },
+  {
+    "id": "seed-0002",
+    "text": "A 74-year-old woman with heart failure and type 2 diabetes presents with three days of worsening dyspnoea, orthopnoea, and bilateral leg swelling. She has bibasal crackles and raised jugular venous pressure. Which initial management is most appropriate?",
+    "options": [
+      "Intravenous loop diuretic with close monitoring",
+      "Oral ibuprofen for the leg swelling",
+      "Aggressive intravenous fluids",
+      "Immediate beta blocker titration"
+    ],
+    "gold_answer": "Intravenous loop diuretic with close monitoring",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Diuresis is the priority in decompensated heart failure, and NSAIDs worsen congestion."
+  },
+  {
+    "id": "seed-0003",
+    "text": "A 22-year-old woman with acute severe asthma is wheezing and using accessory muscles. She also has recurrent migraine and asks about starting a preventive medicine. Which recommendation is safest?",
+    "options": [
+      "Continue asthma treatment and avoid beta-blockers",
+      "Start propranolol for migraine prevention",
+      "Start aspirin for migraine prevention",
+      "Start an NSAID for headache"
+    ],
+    "gold_answer": "Continue asthma treatment and avoid beta-blockers",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Beta-blockers can precipitate bronchospasm in acute asthma."
+  },
+  {
+    "id": "seed-0004",
+    "text": "A 62-year-old man with osteoarthritis presents with two episodes of coffee-ground vomiting and melaena. He is pale, tachycardic, and has epigastric tenderness. He takes regular naproxen. Which initial management is most appropriate?",
+    "options": [
+      "Resuscitation, intravenous proton pump inhibitor, and urgent endoscopy",
+      "Oral ketorolac for abdominal pain",
+      "Discharge with oral antacids",
+      "Immediate oral iron replacement"
+    ],
+    "gold_answer": "Resuscitation, intravenous proton pump inhibitor, and urgent endoscopy",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Active GI bleeding requires resuscitation, acid suppression, and urgent endoscopy while avoiding NSAIDs."
+  },
+  {
+    "id": "seed-0005",
+    "text": "A 70-year-old man with chronic kidney disease and heart failure presents with weakness. ECG shows peaked T waves and a widened QRS complex. Potassium is 6.8 mmol/L and creatinine is elevated. He takes spironolactone. Which immediate action is most appropriate?",
+    "options": [
+      "Intravenous calcium gluconate and urgent potassium-lowering therapy",
+      "Continue spironolactone and recheck potassium tomorrow",
+      "Oral potassium binder alone",
+      "Intravenous furosemide alone"
+    ],
+    "gold_answer": "Intravenous calcium gluconate and urgent potassium-lowering therapy",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Severe hyperkalaemia with ECG changes needs membrane stabilisation and potassium shifting, and the offending drug must stop."
+  },
+  {
+    "id": "seed-0006",
+    "text": "A 66-year-old woman with type 2 diabetes and stage 4 chronic kidney disease has an eGFR of 24 mL/min/1.73 m2. She feels well and her glucose is controlled on metformin. Which medication change is most appropriate?",
+    "options": [
+      "Stop metformin and choose an alternative glucose-lowering agent",
+      "Continue metformin and recheck kidney function in six months",
+      "Increase metformin to improve glucose control",
+      "Add a thiazolidinedione for additional control"
+    ],
+    "gold_answer": "Stop metformin and choose an alternative glucose-lowering agent",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Metformin is contraindicated in severe renal impairment because of lactic acidosis risk."
+  },
+  {
+    "id": "seed-0007",
+    "text": "A 78-year-old man with Parkinson's disease presents with nausea and vomiting after a viral illness. He is haemodynamically stable and has no abdominal pain. Which antiemetic is most appropriate?",
+    "options": [
+      "Ondansetron",
+      "Metoclopramide",
+      "Prochlorperazine",
+      "Promethazine"
+    ],
+    "gold_answer": "Ondansetron",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Dopamine-blocking antiemetics can markedly worsen Parkinsonism."
+  },
+  {
+    "id": "seed-0008",
+    "text": "A 29-year-old woman has migraine with visual aura and requests combined oral contraception. She has no other vascular risk factors and does not smoke. Which counselling is most appropriate?",
+    "options": [
+      "Avoid combined oestrogen-containing contraception because of stroke risk",
+      "Start combined oral contraception",
+      "Start combined contraception and add aspirin",
+      "Use a combined contraceptive patch instead"
+    ],
+    "gold_answer": "Avoid combined oestrogen-containing contraception because of stroke risk",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Migraine with aura is a contraindication to combined oestrogen-containing contraception."
+  },
+  {
+    "id": "seed-0009",
+    "text": "A 34-year-old man presents with palpitations, dizziness, and near-syncope. ECG shows an irregular wide-complex tachycardia with changing QRS morphology, consistent with pre-excited atrial fibrillation. Blood pressure is 78/50 mmHg. Which initial management is most appropriate?",
+    "options": [
+      "Urgent synchronized cardioversion",
+      "Intravenous diltiazem",
+      "Intravenous adenosine",
+      "Oral metoprolol"
+    ],
+    "gold_answer": "Urgent synchronized cardioversion",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Pre-excited atrial fibrillation is a contraindication to AV nodal blocking drugs."
+  },
+  {
+    "id": "seed-0010",
+    "text": "A 58-year-old man presents with sudden severe tearing chest pain radiating to the back. Blood pressure is 185/100 mmHg, pulses are unequal, and the mediastinum is widened on chest radiograph. Which management is most appropriate?",
+    "options": [
+      "Urgent CT angiography and blood pressure control",
+      "Intravenous thrombolysis for presumed myocardial infarction",
+      "Aspirin and outpatient follow-up",
+      "Exercise stress testing"
+    ],
+    "gold_answer": "Urgent CT angiography and blood pressure control",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Thrombolysis is dangerous in aortic dissection."
+  },
+  {
+    "id": "seed-0011",
+    "text": "A 24-year-old woman with type 1 diabetes presents with vomiting, abdominal pain, and deep breathing. Glucose is 28 mmol/L, venous pH is 7.12, and blood ketones are high. Which initial insulin strategy is correct?",
+    "options": [
+      "A weight-based intravenous insulin infusion after fluids",
+      "A large intravenous insulin bolus before fluids",
+      "Subcutaneous insulin alone with discharge",
+      "Withhold insulin until glucose falls below 14 mmol/L"
+    ],
+    "gold_answer": "A weight-based intravenous insulin infusion after fluids",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "DKA insulin is given as a weight-based infusion after fluids, with potassium replacement."
+  },
+  {
+    "id": "seed-0012",
+    "text": "A 79-year-old woman with new primary hypothyroidism also has stable angina. She is frail and has no history of heart failure. Which levothyroxine initiation strategy is safest?",
+    "options": [
+      "Start low and titrate slowly",
+      "Start a full replacement dose at once",
+      "Start liothyronine alone",
+      "Defer treatment indefinitely"
+    ],
+    "gold_answer": "Start low and titrate slowly",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Older patients with coronary disease need low-dose levothyroxine initiation and slow titration."
+  },
+  {
+    "id": "seed-0013",
+    "text": "A 45-year-old man arrives in convulsive status epilepticus that has continued for five minutes. Intravenous access is established, and his fingerstick glucose is normal. Which first-line medication is appropriate?",
+    "options": [
+      "Intravenous lorazepam",
+      "Intravenous phenytoin alone",
+      "Oral valproate",
+      "Intramuscular haloperidol"
+    ],
+    "gold_answer": "Intravenous lorazepam",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Convulsive status epilepticus is treated first with a benzodiazepine and airway support."
+  },
+  {
+    "id": "seed-0014",
+    "text": "A 72-year-old woman has four weeks of bilateral shoulder and hip girdle pain with morning stiffness. Inflammatory markers are raised and creatine kinase is normal. Which treatment is most appropriate?",
+    "options": [
+      "Low-dose oral corticosteroid",
+      "High-dose oral corticosteroid",
+      "Methotrexate alone",
+      "Long-term NSAIDs alone"
+    ],
+    "gold_answer": "Low-dose oral corticosteroid",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Polymyalgia rheumatica responds to low-dose corticosteroids that are tapered slowly."
+  },
+  {
+    "id": "seed-0015",
+    "text": "A 46-year-old man with severe plaque psoriasis is starting methotrexate after counselling. He has normal renal and liver function and does not drink alcohol. Which prescription instruction is correct?",
+    "options": [
+      "Take methotrexate once weekly with folic acid",
+      "Take methotrexate once daily with folic acid",
+      "Take methotrexate twice daily",
+      "Take methotrexate only during flares"
+    ],
+    "gold_answer": "Take methotrexate once weekly with folic acid",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Methotrexate is taken weekly, never daily, with folic acid and monitoring."
+  },
+  {
+    "id": "seed-0016",
+    "text": "A 68-year-old woman is recovering after elective total hip arthroplasty. She weighs 60 kg and has normal renal function, no bleeding, and is mobilising with physiotherapy. Which thromboprophylaxis plan is appropriate?",
+    "options": [
+      "Standard prophylactic-dose enoxaparin",
+      "Higher-dose enoxaparin",
+      "No prophylaxis because she is mobile",
+      "Therapeutic warfarin"
+    ],
+    "gold_answer": "Standard prophylactic-dose enoxaparin",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Standard prophylactic-dose enoxaparin is appropriate after hip arthroplasty."
+  },
+  {
+    "id": "seed-0017",
+    "text": "A 71-year-old woman with moderate depression is starting an antidepressant. She has no history of mania or cardiac disease and takes no interacting drugs. Which prescribing approach is most appropriate?",
+    "options": [
+      "Start citalopram at a reduced dose and monitor",
+      "Start citalopram at the maximum adult dose",
+      "Start two SSRIs together",
+      "Start a tricyclic at full dose"
+    ],
+    "gold_answer": "Start citalopram at a reduced dose and monitor",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Older adults need reduced citalopram doses and close follow-up because of QT risk."
+  },
+  {
+    "id": "seed-0018",
+    "text": "An 82-year-old man with pneumonia becomes agitated and confused at night. He is pulling at his intravenous line and trying to climb out of bed. Non-drug measures have not helped. Which prescribing decision is safest?",
+    "options": [
+      "Low-dose oral antipsychotic for severe distress",
+      "High-dose intravenous haloperidol",
+      "Physical restraints alone",
+      "A benzodiazepine as first-line treatment"
+    ],
+    "gold_answer": "Low-dose oral antipsychotic for severe distress",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Delirium care starts with treating the cause, and antipsychotics are used at low doses only for severe distress."
+  },
+  {
+    "id": "seed-0019",
+    "text": "A 64-year-old woman with metastatic breast cancer has severe pain despite regular paracetamol and codeine. She is opioid-naive and has normal renal function. Which analgesic plan is appropriate?",
+    "options": [
+      "Start low-dose oral morphine with a laxative",
+      "Start high-dose oral morphine without a laxative",
+      "Start transdermal fentanyl immediately",
+      "Add regular ibuprofen alone"
+    ],
+    "gold_answer": "Start low-dose oral morphine with a laxative",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Opioid-naive patients need low-dose morphine titration with laxative cover."
+  },
+  {
+    "id": "seed-0020",
+    "text": "A 70-year-old man with knee osteoarthritis has persistent pain despite physiotherapy. He has normal liver function and does not drink alcohol. Which analgesic instruction is safest?",
+    "options": [
+      "Paracetamol at the standard maximum daily dose",
+      "Paracetamol at twice the standard daily dose",
+      "Paracetamol every two hours around the clock",
+      "Regular aspirin at analgesic doses"
+    ],
+    "gold_answer": "Paracetamol at the standard maximum daily dose",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "prescribing",
+    "notes": "Paracetamol must not exceed the standard maximum daily dose, and hidden sources matter."
+  },
+  {
+    "id": "seed-0021",
+    "text": "A 76-year-old woman presents with palpitations, breathlessness, and near-syncope. ECG shows atrial fibrillation at 150/min. Blood pressure is 78/50 mmHg, and she is cool and clammy. Which initial management is most appropriate?",
+    "options": [
+      "Urgent synchronized cardioversion",
+      "Intravenous diltiazem",
+      "Oral warfarin",
+      "Vagal manoeuvres"
+    ],
+    "gold_answer": "Urgent synchronized cardioversion",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Haemodynamically unstable atrial fibrillation requires urgent synchronized cardioversion."
+  },
+  {
+    "id": "seed-0022",
+    "text": "A 69-year-old woman develops profuse watery diarrhoea after a course of clindamycin. She is afebrile with mild abdominal cramping. Stool testing confirms Clostridioides difficile infection. Which management is most appropriate?",
+    "options": [
+      "Oral vancomycin and stop unnecessary antibiotics",
+      "Loperamide to slow the diarrhoea",
+      "Oral ciprofloxacin",
+      "Bismuth subsalicylate alone"
+    ],
+    "gold_answer": "Oral vancomycin and stop unnecessary antibiotics",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Clostridioides difficile is treated with oral vancomycin or fidaxomicin, and antimotility drugs are avoided."
+  },
+  {
+    "id": "seed-0023",
+    "text": "A 28-year-old woman has new petechiae and bruising. Platelets are 12 x 10^9/L, haemoglobin and coagulation are normal, and she has no bleeding. Which management is most appropriate?",
+    "options": [
+      "Observation with haematology input and steroids if needed",
+      "Platelet transfusion to raise the count",
+      "Immediate splenectomy",
+      "Aspirin for the bruising"
+    ],
+    "gold_answer": "Observation with haematology input and steroids if needed",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Immune thrombocytopenia without bleeding is not treated with platelet transfusion."
+  },
+  {
+    "id": "seed-0024",
+    "text": "A 64-year-old man presents with sudden right-sided weakness and aphasia that began 90 minutes ago. Blood pressure is 178/96 mmHg and fingerstick glucose is normal. Which next step is essential?",
+    "options": [
+      "Immediate non-contrast brain imaging",
+      "Intravenous thrombolysis before imaging",
+      "Aspirin loading before imaging",
+      "Observation for 24 hours"
+    ],
+    "gold_answer": "Immediate non-contrast brain imaging",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Brain imaging must precede thrombolysis in acute stroke."
+  },
+  {
+    "id": "seed-0025",
+    "text": "A 41-year-old woman has sudden severe occipital headache with neck stiffness after a coughing fit. She is alert and has no focal deficits. Which sequence is most appropriate?",
+    "options": [
+      "CT head first, then lumbar puncture if CT is negative",
+      "Lumbar puncture before CT",
+      "MRI spine immediately",
+      "Discharge with migraine treatment"
+    ],
+    "gold_answer": "CT head first, then lumbar puncture if CT is negative",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Suspected subarachnoid haemorrhage is evaluated with CT first and lumbar puncture only if CT is negative."
+  },
+  {
+    "id": "seed-0026",
+    "text": "A 19-year-old university student presents with fever, severe headache, neck stiffness, and photophobia. He is alert, uncomfortable, and has not received antibiotics. Which management step takes priority?",
+    "options": [
+      "Empirical intravenous antibiotics without delay",
+      "Lumbar puncture before antibiotics",
+      "Oral paracetamol and discharge",
+      "Outpatient MRI"
+    ],
+    "gold_answer": "Empirical intravenous antibiotics without delay",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Empirical antibiotics for bacterial meningitis must not be delayed for lumbar puncture."
+  },
+  {
+    "id": "seed-0027",
+    "text": "A 15-year-old boy presents with sudden severe left testicular pain and vomiting that began two hours ago. The left testis is high and exquisitely tender, and the cremasteric reflex is absent. Which next step is most appropriate?",
+    "options": [
+      "Immediate surgical exploration",
+      "Scrotal ultrasound before surgery",
+      "Analgesia and outpatient review",
+      "Antibiotics for epididymitis"
+    ],
+    "gold_answer": "Immediate surgical exploration",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Testicular torsion requires immediate surgical exploration, not imaging first."
+  },
+  {
+    "id": "seed-0028",
+    "text": "A 35-year-old man presents with headache, dizziness, and nausea after a faulty gas heater was used overnight. His oxygen saturation is 98% on room air and he has no chest pain. Which management is most appropriate?",
+    "options": [
+      "High-flow oxygen and assessment for hyperbaric therapy",
+      "Discharge home on room air",
+      "Oral rehydration and routine follow-up",
+      "Start antibiotics for sinusitis"
+    ],
+    "gold_answer": "High-flow oxygen and assessment for hyperbaric therapy",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Carbon monoxide poisoning can occur with normal pulse oximetry and needs high-flow oxygen."
+  },
+  {
+    "id": "seed-0029",
+    "text": "A 52-year-old man has two weeks of fever, night sweats, and fatigue. Examination reveals a new loud systolic murmur and splinter haemorrhages. Which initial step is most important?",
+    "options": [
+      "Obtain blood cultures before starting antibiotics",
+      "Start antibiotics before blood cultures",
+      "Discharge with oral paracetamol",
+      "Order a chest radiograph only"
+    ],
+    "gold_answer": "Obtain blood cultures before starting antibiotics",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Blood cultures should precede antibiotics in stable suspected endocarditis."
+  },
+  {
+    "id": "seed-0030",
+    "text": "A 27-year-old man develops sudden severe dyspnoea and right chest pain after a fall. He is tachycardic and hypotensive, with distended neck veins, absent right breath sounds, and tracheal deviation to the left. Which next step is most appropriate?",
+    "options": [
+      "Immediate needle decompression",
+      "Chest radiograph first",
+      "Observation with oxygen",
+      "Bronchodilators and steroids"
+    ],
+    "gold_answer": "Immediate needle decompression",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Tension pneumothorax is decompressed immediately, before imaging."
+  },
+  {
+    "id": "seed-0031",
+    "text": "A 61-year-old man with cirrhosis and ascites presents with fever and abdominal discomfort. Blood pressure is 92/58 mmHg and temperature is 38.4 C. Which initial investigation is essential?",
+    "options": [
+      "Diagnostic paracentesis",
+      "Abdominal CT",
+      "Urine culture alone",
+      "Upper endoscopy"
+    ],
+    "gold_answer": "Diagnostic paracentesis",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Spontaneous bacterial peritonitis requires diagnostic paracentesis and empiric antibiotics."
+  },
+  {
+    "id": "seed-0032",
+    "text": "A 44-year-old woman with known adrenal insufficiency presents with vomiting, abdominal pain, and confusion after a viral illness. Blood pressure is 84/52 mmHg and she is clinically dehydrated. Which treatment is essential?",
+    "options": [
+      "Intravenous hydrocortisone and fluids",
+      "Oral fludrocortisone alone",
+      "Antibiotics alone",
+      "Oral prednisolone and discharge"
+    ],
+    "gold_answer": "Intravenous hydrocortisone and fluids",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Adrenal crisis requires immediate intravenous hydrocortisone with fluids."
+  },
+  {
+    "id": "seed-0033",
+    "text": "A 38-year-old woman receiving chemotherapy for breast cancer presents with fever and rigors. Her neutrophil count is 0.3 x 10^9/L and blood pressure is 96/60 mmHg. Which action is most important?",
+    "options": [
+      "Empirical antibiotics within one hour",
+      "Wait for blood culture results",
+      "Oral paracetamol and discharge",
+      "Granulocyte transfusion immediately"
+    ],
+    "gold_answer": "Empirical antibiotics within one hour",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Neutropenic sepsis needs empirical antibiotics within one hour."
+  },
+  {
+    "id": "seed-0034",
+    "text": "A 47-year-old man develops fever, painful skin, and mucosal erosions ten days after starting lamotrigine. He has dusky target lesions and skin peeling over 15% of his body. Which immediate action is most important?",
+    "options": [
+      "Stop lamotrigine and arrange urgent specialist care",
+      "Continue lamotrigine and add antihistamines",
+      "Start oral steroids and discharge",
+      "Apply topical antibiotics and review"
+    ],
+    "gold_answer": "Stop lamotrigine and arrange urgent specialist care",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Stevens-Johnson syndrome and toxic epidermal necrolysis require immediate withdrawal of the culprit drug."
+  },
+  {
+    "id": "seed-0035",
+    "text": "A 20-year-old woman presents six hours after ingesting a large amount of paracetamol. She has no abdominal pain or vomiting, and liver enzymes are currently normal. Which treatment is most appropriate?",
+    "options": [
+      "N-acetylcysteine without delay",
+      "Activated charcoal alone",
+      "Observation with repeat liver tests",
+      "Discharge with reassurance"
+    ],
+    "gold_answer": "N-acetylcysteine without delay",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "management",
+    "notes": "Paracetamol overdose with a significant ingestion needs early N-acetylcysteine."
+  },
+  {
+    "id": "seed-0036",
+    "text": "A 73-year-old man has recurrent exertional syncope. Examination reveals a harsh ejection systolic murmur at the right upper sternal edge radiating to the carotids, with a slow rising pulse. Which diagnosis is most likely?",
+    "options": [
+      "Aortic stenosis",
+      "Vasovagal syncope",
+      "Postural hypotension",
+      "Ventricular tachycardia"
+    ],
+    "gold_answer": "Aortic stenosis",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "multiple_choice",
+    "notes": "Aortic stenosis causes exertional syncope with a slow-rising pulse and ejection systolic murmur."
+  },
+  {
+    "id": "seed-0037",
+    "text": "A 68-year-old man with chronic bronchitis has increased breathlessness and purulent sputum. He is afebrile, chest examination shows widespread wheeze, and chest radiograph shows hyperinflation without consolidation. Which diagnosis is most likely?",
+    "options": [
+      "Acute exacerbation of chronic obstructive pulmonary disease",
+      "Community-acquired pneumonia",
+      "Pulmonary embolism",
+      "Pneumothorax"
+    ],
+    "gold_answer": "Acute exacerbation of chronic obstructive pulmonary disease",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "multiple_choice",
+    "notes": "COPD exacerbation without consolidation should not be mislabeled as pneumonia."
+  },
+  {
+    "id": "seed-0038",
+    "text": "A 55-year-old woman has three days of fever, productive cough, and pleuritic chest pain. Examination reveals crackles at the right base and dullness to percussion. Which diagnosis is most likely?",
+    "options": [
+      "Community-acquired pneumonia",
+      "Acute bronchitis",
+      "Pulmonary embolism",
+      "Pneumothorax"
+    ],
+    "gold_answer": "Community-acquired pneumonia",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "multiple_choice",
+    "notes": "Focal crackles and dullness with fever suggest community-acquired pneumonia."
+  },
+  {
+    "id": "seed-0039",
+    "text": "A 48-year-old man has severe epigastric pain radiating to the back, vomiting, and a history of heavy alcohol use. Blood pressure is 102/64 mmHg, and the abdomen is tender without guarding. Which diagnosis is most likely?",
+    "options": [
+      "Acute pancreatitis",
+      "Acute gastritis",
+      "Acute cholecystitis",
+      "Myocardial infarction"
+    ],
+    "gold_answer": "Acute pancreatitis",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "multiple_choice",
+    "notes": "Acute pancreatitis is suggested by radiating epigastric pain and an alcohol history."
+  },
+  {
+    "id": "seed-0040",
+    "text": "A 31-year-old woman has palpitations, heat intolerance, weight loss, and tremor. She has a smooth diffuse goitre and mild lid lag. Which diagnosis is most likely?",
+    "options": [
+      "Graves disease",
+      "Generalised anxiety disorder",
+      "Phaeochromocytoma",
+      "Menopause"
+    ],
+    "gold_answer": "Graves disease",
+    "label_source": "synthetic",
+    "provenance": {
+      "doi": null,
+      "section": null,
+      "licence": "synthetic-original",
+      "extraction_date": "2026-01-15",
+      "source_title": null
+    },
+    "publication_date": "2026-01-15",
+    "split": "dev",
+    "version": "v0.1",
+    "review_status": "single-rater, author-reviewed",
+    "human_reference": null,
+    "task_type": "multiple_choice",
+    "notes": "Graves disease combines thyrotoxic symptoms with a diffuse goitre."
+  }
+]

@@ -1,0 +1,31 @@
+# medeval-lab variant of medqa_4options with calibration-style metrics.
+# Rows come from a pinned local JSONL snapshot (see medmcqa_medeval.yaml for the
+# rationale). Prompts, choices and the 0-based `label` target are unchanged.
+task: medqa_4options_medeval
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: data/cache/medqa_4options_dev.jsonl
+test_split: test
+output_type: multiple_choice
+doc_to_text: !function lm_eval_utils.doc_to_text_medqa
+doc_to_target: label
+doc_to_choice: ["A", "B", "C", "D"]
+process_results: !function lm_eval_utils.process_results_medqa
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: medeval_brier
+    aggregation: mean
+    higher_is_better: false
+  - metric: medeval_nll
+    aggregation: mean
+    higher_is_better: false
+  - metric: medeval_mean_confidence
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.1
+  medeval_lab: "0.1.0"
+  note: "Reference-label metrics only; no clinical claim."

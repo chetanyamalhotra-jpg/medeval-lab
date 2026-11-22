@@ -1,0 +1,152 @@
+name: ci
+
+# This workflow has never been observed to run (nothing has been pushed yet), so
+# the repository makes no "CI passing" claim. See VERIFY_ME.md.
+#
+# Deliberately offline: no repository secrets, no paid API calls, no model
+# discovery, no dataset downloads and no execution of fork pull-request code.
+# The one network-using step is the advisory dependency audit, which is
+# non-blocking on purpose.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  MEDEVAL_BACKEND: mock
+  MEDEVAL_BASE_URL: ""
+  MEDEVAL_MODEL: ""
+  MEDEVAL_API_KEY: ""
+  MEDEVAL_HF_MODEL: ""
+  # The dataset cache is git-ignored, so the harness and audit stages cannot
+  # fetch data here; study tests use synthetic items and local fake servers.
+  MEDEVAL_SKIP_DATASETS_BUILDER: "1"
+  # Keys come from the app's memory in production; CI has none by design.
+  PYTEST_MEDEVAL_DISABLE_DOTENV: "1"
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install -e . --no-build-isolation
+
+      - name: Lint
+        run: python -m ruff check .
+
+      - name: Secret scan (tracked files and every reachable history blob)
+        run: python scripts/scan_secrets.py
+
+      - name: OSS release audit (tracked content only)
+        # Fails on key-like strings, tracked .env files, personal paths, emails
+        # outside the allow-list, run artefacts and files over 5 MB. The
+        # full-history scan is the separate job below.
+        run: python scripts/oss_audit.py
+
+      - name: Run tests
+        run: python -m pytest tests -q
+
+      - name: Validate seed items
+        run: python -m medeval validate data/items/seed_v0.1.json
+
+      - name: Check literature traceability
+        # Fails if any criterion or metric cites a literature ID that is absent
+        # from data/literature.csv. Unverified DOIs are warnings, not failures.
+        run: python -m medeval traceability
+
+      - name: Validate all Paper Packs (offline)
+        run: python -m medeval paper validate
+
+      - name: Dry-run every starter Paper Pack (offline, mock transport)
+        run: |
+          python -m medeval matrix run --paper template-clinical-mcq --dry-run --n-items 6 --max-calls 50
+          python -m medeval matrix run --paper template-rubric-panel --dry-run --n-items 4 --max-calls 50
+          python -m medeval matrix run --paper template-structured-extraction --dry-run --n-items 4 --max-calls 50
+
+  browser:
+    # Optional job: the Playwright suite needs a real browser. It is offline (a
+    # local fake provider and a local fake Crossref only) and never uses a key.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies and Chromium
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install -e . --no-build-isolation
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Browser end-to-end tests (offline)
+        env:
+          MEDEVAL_BACKEND: mock
+        run: python -m pytest tests/browser -q
+
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install the audit tool and the pinned environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install pip-audit
+
+      - name: Dependency vulnerability scan (advisory, non-blocking)
+        # Best effort by design: a new advisory in an indirect dependency must not
+        # turn every unrelated pull request red. The result is still printed and a
+        # maintainer is expected to read it; see SECURITY.md.
+        continue-on-error: true
+        run: python -m pip_audit -r requirements.txt
+
+  history-audit:
+    # Release preparation only: scans every blob reachable from any ref for the
+    # strings that were fixed at HEAD but remain in history (personal paths in
+    # old docs, fake test keys, the ten formerly hidden seed items). Their
+    # triage and the owner's two options are in OSS_AUDIT.md. This is a manual
+    # job because those old blobs cannot be changed without rewriting history.
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Full history audit (triage against OSS_AUDIT.md)
+        run: python scripts/oss_audit.py --history

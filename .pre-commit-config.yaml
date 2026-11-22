@@ -1,0 +1,39 @@
+# Pre-commit hooks: the cheap checks that must pass before a commit leaves your
+# machine. Install once with:
+#
+#   python -m pip install pre-commit
+#   pre-commit install
+#
+# Run on everything without committing:
+#
+#   pre-commit run --all-files
+#
+# The release audit and the secret scan are the same scripts CI runs, so a local
+# failure is the same failure. Both read the repository only; neither talks to a
+# network, a provider or a key.
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.5
+    hooks:
+      - id: ruff
+        name: ruff (lint)
+        args: [--no-cache]
+
+  - repo: local
+    hooks:
+      - id: oss-audit
+        name: OSS release audit (no keys, no personal paths, no run artefacts)
+        entry: python scripts/oss_audit.py
+        language: python
+        pass_filenames: false
+        always_run: true
+        additional_dependencies: []
+
+      - id: secret-scan
+        name: secret scan (tracked files and reachable history)
+        entry: python scripts/scan_secrets.py
+        language: python
+        pass_filenames: false
+        always_run: true
+        additional_dependencies: []

@@ -1,0 +1,57 @@
+# Pinned dependencies for medeval-lab 0.5.0 (Python 3.11+; built and tested on
+# CPython 3.14.6 on Windows 11, CI targets 3.12 and 3.13).
+#
+# THIS FILE IS THE REPRODUCIBLE ENVIRONMENT. `pyproject.toml` deliberately keeps
+# version *floors* (`>=`) because it also describes what the library can work
+# with; this file is the exact set the tests and the released results were made
+# with. To reproduce the environment:
+#
+#   python -m venv .venv
+#   .\.venv\Scripts\Activate.ps1            # or: source .venv/bin/activate
+#   python -m pip install --upgrade pip
+#   python -m pip install -r requirements.txt
+#   python -m pip install -e . --no-build-isolation     # optional: the `medeval` script
+#
+# Then: `python -m pytest`, `python -m ruff check .`, `python scripts/oss_audit.py`.
+# Dependabot proposes updates in reviewable batches; a dependency upgrade is only
+# accepted after pytest, ruff and the release audit pass (see .github/dependabot.yml).
+# Versions are exactly what the v0.1-v0.4 results were produced with; see
+# DECISIONS.md D-002 and D-026. The lm-evaluation-harness is a separate source
+# checkout (MIT). It is NOT a PyPI dependency here because upstream is consumed
+# read-only from a local clone; see DECISIONS.md D-004 and run_all.ps1, which
+# registers the checkout if one is present.
+
+# Runtime
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+matplotlib==3.11.2
+PyYAML==6.0.3
+jsonschema==4.26.0
+requests==2.34.2
+python-dotenv==1.2.4
+
+# Local web app (loopback only; served from static files, no build step)
+fastapi==0.163.1
+uvicorn==0.54.0
+
+# Test and lint tooling
+pytest==9.2.0
+httpx==0.28.1
+ruff==0.17.5
+
+# Harness import-time dependencies (needed because lm_eval is imported from the
+# source checkout rather than installed as a wheel)
+datasets==5.2.0
+evaluate==0.4.6
+Jinja2==3.1.6
+pytablewriter==1.2.1
+rouge-score==0.1.2
+sacrebleu==2.6.0
+scikit-learn==1.9.1
+sqlitedict==2.1.0
+dill==0.4.1
+word2number==1.1
+more-itertools==11.2.1
+typing_extensions==4.16.0
+tqdm==4.70.1

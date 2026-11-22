@@ -1,0 +1,419 @@
+{
+  "pipeline_test_only": false,
+  "status": "real",
+  "n_items": 60,
+  "n_candidates_correct": 30,
+  "n_candidates_incorrect": 30,
+  "candidate_condition_balance": {
+    "correct": 30,
+    "incorrect": 30
+  },
+  "judges": {
+    "j1_deepseek": {
+      "spec": {
+        "judge_id": "j1_deepseek",
+        "family": "deepseek",
+        "backend": "openai-compatible-api",
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "temperature": 0.3,
+        "repeats": 3,
+        "notes": "remote API judge; answer key never sent",
+        "available": true,
+        "unavailable_reason": null,
+        "pipeline_test_only": false
+      },
+      "primary_repeat": {
+        "judge_id": "j1_deepseek",
+        "repeat": 0,
+        "n_items": 60,
+        "n_scored": 59,
+        "n_parse_failures": 1,
+        "n_api_errors": 0,
+        "unscored_item_ids": [
+          "dev-00985"
+        ],
+        "accuracy": {
+          "numerator": 58,
+          "denominator": 59,
+          "estimate": 0.9830508474576272,
+          "ci95_wilson": [
+            0.9100427403585771,
+            0.9970017660816444
+          ],
+          "method": "wilson"
+        },
+        "false_accept_rate": {
+          "numerator": 0,
+          "denominator": 29,
+          "estimate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.11696979849974075
+          ],
+          "method": "wilson"
+        },
+        "false_reject_rate": {
+          "numerator": 1,
+          "denominator": 30,
+          "estimate": 0.03333333333333333,
+          "ci95_wilson": [
+            0.005908590381612455,
+            0.16670390991409173
+          ],
+          "method": "wilson"
+        },
+        "cohen_kappa_vs_key": 0.9661114302125217,
+        "cohen_kappa_vs_key_ci95": {
+          "estimate": 0.9661114302125217,
+          "low": 0.8941602783738734,
+          "high": 1.0,
+          "width": 0.10583972162612665,
+          "n_resamples": 1000,
+          "method": "percentile bootstrap over items",
+          "seed": 20260101,
+          "alpha": 0.05,
+          "n": 59
+        },
+        "gwet_ac1_vs_key": 0.9661016949152543,
+        "percent_agreement_vs_key": 0.9830508474576272,
+        "calibration": {
+          "ece_5_bins": 0.0006779661016949046,
+          "ece_5_bins_ci95": {
+            "estimate": 0.0006779661016949046,
+            "low": 0.00016949152542378165,
+            "high": 0.03745762711864409,
+            "width": 0.037288135593220306,
+            "n_resamples": 1000,
+            "method": "percentile bootstrap over items",
+            "seed": 20260101,
+            "alpha": 0.05,
+            "n": 59
+          },
+          "brier": 0.01676271186440678,
+          "brier_ci95": {
+            "estimate": 0.01676271186440678,
+            "low": 0.0003338559322033904,
+            "high": 0.04951228813559321,
+            "width": 0.04917843220338982,
+            "n_resamples": 1000,
+            "method": "percentile bootstrap over items",
+            "seed": 20260101,
+            "alpha": 0.05,
+            "n": 59
+          },
+          "auroc_confidence_predicts_own_correctness": 0.7327586206896551,
+          "auroc_confidence_predicts_own_correctness_ci95": null,
+          "auroc_raw_verdict_predicts_truth": 0.9833333333333333,
+          "mean_confidence": 98.37288135593221,
+          "confidence_min": 95,
+          "confidence_max": 100,
+          "confidence_histogram_5_bins": [
+            {
+              "low": 0.0,
+              "high": 20.0,
+              "count": 0
+            },
+            {
+              "low": 20.0,
+              "high": 40.0,
+              "count": 0
+            },
+            {
+              "low": 40.0,
+              "high": 60.0,
+              "count": 0
+            },
+            {
+              "low": 60.0,
+              "high": 80.0,
+              "count": 0
+            },
+            {
+              "low": 80.0,
+              "high": 100.0,
+              "count": 59
+            }
+          ],
+          "reliability_bins": [
+            {
+              "low": 0.0,
+              "high": 0.2,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.2,
+              "high": 0.4,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.4,
+              "high": 0.6000000000000001,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.6000000000000001,
+              "high": 0.8,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.8,
+              "high": 1.0,
+              "n": 59,
+              "mean_confidence": 0.9837288135593221,
+              "observed_accuracy": 0.9830508474576272
+            }
+          ]
+        },
+        "verdict_distribution": {
+          "correct": 29,
+          "incorrect": 30
+        },
+        "error_examples": [
+          {
+            "item_id": "dev-00666",
+            "candidate_was_correct": true,
+            "judge_said": "INCORRECT",
+            "confidence": 98
+          }
+        ]
+      },
+      "across_repeats": {
+        "judge_id": "j1_deepseek",
+        "n_items_all_repeats": 59,
+        "consistent_count": 59,
+        "consistent_fraction": 1.0,
+        "consistent_fraction_ci95_wilson": [
+          0.9388706294732116,
+          1.0
+        ],
+        "mean_pairwise_agreement_across_repeats": 1.0
+      }
+    }
+  },
+  "cross_judge": {},
+  "possible_key_errors": {
+    "rule": {
+      "two_judge": "both judges disagree with the key at confidence >= 80",
+      "single_judge_fallback": "one judge disagrees at confidence >= 90; reported for manual review only, never as a key error",
+      "applied": "single_judge_fallback"
+    },
+    "n_flagged_possible_key_errors": 0,
+    "possible_key_errors": [],
+    "n_flagged_single_judge": 1,
+    "single_judge_flags": [
+      {
+        "item_id": "dev-00666",
+        "candidate_was_correct": true,
+        "judge": "j1_deepseek",
+        "verdict": "INCORRECT",
+        "confidence": 98,
+        "reason": "single judge very confident and disagrees with the key; not distinguishable from a judge error"
+      }
+    ],
+    "flagged_item_ids": [
+      "dev-00666"
+    ]
+  },
+  "with_and_without_flagged_items": {
+    "excluding_flagged": {
+      "j1_deepseek": {
+        "judge_id": "j1_deepseek",
+        "repeat": 0,
+        "n_items": 59,
+        "n_scored": 58,
+        "n_parse_failures": 1,
+        "n_api_errors": 0,
+        "unscored_item_ids": [
+          "dev-00985"
+        ],
+        "accuracy": {
+          "numerator": 58,
+          "denominator": 58,
+          "estimate": 1.0,
+          "ci95_wilson": [
+            0.9378821442127971,
+            1.0
+          ],
+          "method": "wilson"
+        },
+        "false_accept_rate": {
+          "numerator": 0,
+          "denominator": 29,
+          "estimate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.11696979849974075
+          ],
+          "method": "wilson"
+        },
+        "false_reject_rate": {
+          "numerator": 0,
+          "denominator": 29,
+          "estimate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.11696979849974075
+          ],
+          "method": "wilson"
+        },
+        "cohen_kappa_vs_key": 1.0,
+        "cohen_kappa_vs_key_ci95": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0,
+          "width": 0.0,
+          "n_resamples": 1000,
+          "method": "percentile bootstrap over items",
+          "seed": 20260101,
+          "alpha": 0.05,
+          "n": 58
+        },
+        "gwet_ac1_vs_key": 1.0,
+        "percent_agreement_vs_key": 1.0,
+        "calibration": {
+          "ece_5_bins": 0.016206896551724137,
+          "ece_5_bins_ci95": {
+            "estimate": 0.016206896551724137,
+            "low": 0.012581896551724179,
+            "high": 0.020344827586206926,
+            "width": 0.007762931034482747,
+            "n_resamples": 1000,
+            "method": "percentile bootstrap over items",
+            "seed": 20260101,
+            "alpha": 0.05,
+            "n": 58
+          },
+          "brier": 0.0004931034482758629,
+          "brier_ci95": {
+            "estimate": 0.0004931034482758629,
+            "low": 0.00029995689655172466,
+            "high": 0.0007172844827586219,
+            "width": 0.00041732758620689726,
+            "n_resamples": 1000,
+            "method": "percentile bootstrap over items",
+            "seed": 20260101,
+            "alpha": 0.05,
+            "n": 58
+          },
+          "auroc_confidence_predicts_own_correctness": null,
+          "auroc_confidence_predicts_own_correctness_ci95": null,
+          "auroc_raw_verdict_predicts_truth": 1.0,
+          "mean_confidence": 98.37931034482759,
+          "confidence_min": 95,
+          "confidence_max": 100,
+          "confidence_histogram_5_bins": [
+            {
+              "low": 0.0,
+              "high": 20.0,
+              "count": 0
+            },
+            {
+              "low": 20.0,
+              "high": 40.0,
+              "count": 0
+            },
+            {
+              "low": 40.0,
+              "high": 60.0,
+              "count": 0
+            },
+            {
+              "low": 60.0,
+              "high": 80.0,
+              "count": 0
+            },
+            {
+              "low": 80.0,
+              "high": 100.0,
+              "count": 58
+            }
+          ],
+          "reliability_bins": [
+            {
+              "low": 0.0,
+              "high": 0.2,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.2,
+              "high": 0.4,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.4,
+              "high": 0.6000000000000001,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.6000000000000001,
+              "high": 0.8,
+              "n": 0,
+              "mean_confidence": null,
+              "observed_accuracy": null
+            },
+            {
+              "low": 0.8,
+              "high": 1.0,
+              "n": 58,
+              "mean_confidence": 0.9837931034482759,
+              "observed_accuracy": 1.0
+            }
+          ]
+        },
+        "verdict_distribution": {
+          "correct": 29,
+          "incorrect": 29
+        },
+        "error_examples": []
+      }
+    },
+    "n_flagged": 1,
+    "note": "accuracy recomputed after dropping flagged items, to show how much the flag could matter"
+  },
+  "benchmark_health": {
+    "n_items": 60,
+    "ceiling_per_judge": {
+      "j1_deepseek": {
+        "n_items_with_all_repeats": 59,
+        "n_all_repeats_correct": 58,
+        "ceiling_rate": 0.9830508474576272,
+        "ceiling_rate_ci95_wilson": [
+          0.9100427403585771,
+          0.9970017660816444
+        ],
+        "definition": "fraction of items the judge gets right on every repeat"
+      }
+    },
+    "key_letter_distribution": {
+      "A": 11,
+      "B": 14,
+      "C": 23,
+      "D": 12
+    },
+    "definition_ceiling": "fraction of items answered correctly on every repeat by that judge"
+  },
+  "methods": {
+    "proportion_intervals": "Wilson score, 95%",
+    "other_intervals": "percentile bootstrap over items, 1000 resamples",
+    "consistency": "identical verdict across all 3 repeats",
+    "confidence_scale": "0-100, treated as P(own verdict is right)",
+    "n_resamples": 1000
+  },
+  "experiment": "002_judge_families",
+  "rebuilt_utc": "2026-11-17T11:22:43Z"
+}

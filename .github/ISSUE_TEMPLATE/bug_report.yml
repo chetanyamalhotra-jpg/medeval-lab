@@ -1,0 +1,96 @@
+name: Bug report
+description: Report behaviour that does not match the documentation.
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        medeval-lab is a research tool, not a medical device. Reports about
+        clinical correctness are out of scope; use the benchmark quality template
+        for dataset issues.
+
+        NEVER paste an API key, a token, a `.env` file or any other secret here.
+        Replace secrets with `<redacted>` in logs. If a real key was exposed,
+        revoke it at the provider first, then read `SECURITY.md`.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the observed behaviour, including the exact command or UI action.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Describe what the documentation, help text or a previous release led you to expect.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Exact version
+      description: >
+        Output of `python -m medeval --version` (for example `medeval-lab 0.5.0`).
+      placeholder: "medeval-lab 0.5.0"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and Python version
+      description: For example Windows 11 with CPython 3.14, or Ubuntu 24.04 with CPython 3.12.
+      placeholder: "Windows 11, CPython 3.14"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The smallest sequence that shows the problem. Use a dry run or fake data where possible.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: key-involved
+    attributes:
+      label: Did a provider API key take part?
+      description: Do not paste the key. Select the closest option.
+      options:
+        - "No"
+        - "Yes, but only a mock or local fake server was used"
+        - Yes, a real provider was called
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log excerpt (redacted)
+      description: Paste only the relevant lines, with keys, tokens and personal paths replaced by `<redacted>`.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have not pasted an API key, token or `.env` contents anywhere in this report.
+          required: true
+        - label: I have not pasted benchmark item text, candidate text or reviewer notes.
+          required: true
+        - label: I searched the existing issues for the same problem.
+          required: true

@@ -1,0 +1,105 @@
+# Built-in preset. Synthetic smoke rows only; no MedHallu rows are bundled.
+schema_version: 1
+id: medhallu-detect
+version: 0.1.0
+preset: true
+title: "MedHallu-inspired three-class medical hallucination detection"
+authors:
+  - "Shrey Pandit"
+  - "Jiawei Xu"
+  - "Junyuan Hong"
+  - "Zhangyang Wang"
+  - "Tianlong Chen"
+  - "Kaidi Xu"
+  - "Ying Ding"
+year: 2025
+venue: "EMNLP 2025"
+doi_or_url: "https://aclanthology.org/2025.emnlp-main.143/"
+license: "CC0-1.0 for the synthetic smoke rows; upstream MedHallu terms apply to the source data"
+methodology_notes:
+  kind: inspired_adaptation
+  summary: >-
+    A three-class hallucination detector inspired by MedHallu: given a synthetic
+    medical question-answer pair, the target model labels it hallucinated,
+    not-hallucinated or not-sure. The runner reports macro F1 and macro precision
+    per class, plus abstention and coverage, so a model cannot look good by
+    refusing everything. Smoke rows are invented.
+  limitations: >-
+    No MedHallu rows are bundled. The four smoke pairs are synthetic; the label
+    distribution is not the benchmark's, and macro F1 on four items is a wiring
+    check, not a quality claim. No clinician adjudicated the synthetic labels.
+task_type: triage_classification
+source_dataset:
+  name: "MedHallu (UT Austin AI Health, 2025)"
+  url: "https://huggingface.co/datasets/UTAustin-AIHealth/MedHallu"
+  huggingface: "UTAustin-AIHealth/MedHallu"
+  license: "See the upstream dataset card for the exact licence and terms."
+  notes: >-
+    Reference only. Use loader.py --download after accepting the dataset card, or
+    point --source at a licensed local export.
+adaptation_status: "synthetic_smoke_only; protocol-inspired, not a faithful reproduction; no upstream rows bundled"
+loader: loader.py
+dataset:
+  path: smoke.jsonl
+  format: jsonl
+  seed: 20260101
+  limit: 4
+  screening_size: 0
+  fields: {}
+prompt_template:
+  system: |
+    You are classifying a synthetic medical question-answer pair for a research
+    benchmark about hallucination detection. This is not patient care. Do not give
+    medical advice; only classify the candidate answer.
+  user: |
+    Synthetic medical QA pair:
+    $input
+
+    Classify the candidate answer as exactly one of:
+      hallucinated       - it asserts a fabricated or contradicted medical claim
+      not-hallucinated   - it is consistent with the supplied evidence
+      not-sure           - the evidence is insufficient to decide
+
+    Return JSON only: {"label": "<one of the three labels>", "reason": "<one sentence>"}
+graders:
+  - id: format
+    type: deterministic
+    metric: format_compliance
+  - id: label
+    type: deterministic
+    metric: label_accuracy
+  - id: macro-f1
+    type: deterministic
+    metric: macro_f1
+    options:
+      labels: [hallucinated, not-hallucinated, not-sure]
+  - id: macro-precision
+    type: deterministic
+    metric: macro_precision
+    options:
+      labels: [hallucinated, not-hallucinated, not-sure]
+  - id: coverage
+    type: deterministic
+    metric: coverage
+    options:
+      labels: [hallucinated, not-hallucinated, not-sure]
+  - id: abstention
+    type: deterministic
+    metric: abstention
+metrics:
+  primary: macro_f1
+  secondary: [macro_precision, coverage, abstention]
+  comparison:
+    method: paired_bootstrap
+    alpha: 0.05
+    bootstrap_resamples: 2000
+    bootstrap_seed: 20260101
+citation:
+  bibtex: |
+    @inproceedings{pandit2025medhallu,
+      title = {MedHallu: A Comprehensive Benchmark for Detecting Medical Hallucinations in Large Language Models},
+      author = {Pandit, Shrey and Xu, Jiawei and Hong, Junyuan and Wang, Zhangyang and Chen, Tianlong and Xu, Kaidi and Ding, Ying},
+      booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+      year = {2025},
+      url = {https://aclanthology.org/2025.emnlp-main.143/}
+    }
