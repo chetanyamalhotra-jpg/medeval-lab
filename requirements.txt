@@ -32,13 +32,13 @@ requests==2.34.2
 python-dotenv==1.2.4
 
 # Local web app (loopback only; served from static files, no build step)
-fastapi==0.163.1
+fastapi==0.165.0
 uvicorn==0.54.0
 
 # Test and lint tooling
 pytest==9.2.0
 httpx==0.28.1
-ruff==0.17.5
+ruff==0.17.6
 
 # Harness import-time dependencies (needed because lm_eval is imported from the
 # source checkout rather than installed as a wheel)
